@@ -1,0 +1,68 @@
+---
+title: "Dataviz Makeover Assignment 1"
+description: |
+  Improving the Data Visualisation of the Resident Labour Force by Age Chart, by MOM
+author:
+  - name: Louelle Teo
+    url: https://linkedin.com/in/louelleteo
+date: 01-23-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Presently, this is the graph presented by the Ministry of Manpower on the Labour Participation Rate in 2009 and
+
+![Chart6, Resident labour force by age](images/dataviz1-chart6.png)
+
+**The Task**
+
+**a. Critic the graph from both its clarity and aesthetics. At least three from each evaluation criterion.**
+
+
+|Clarity|Critique|
+|---|--------|
+|1. |The missing Y-axis does not identify what are the measured values in the graph. We are therefore unable to interpret what the line graphs stand for|
+|2. |The missing X-axis Labels does not indicate what are the category representation. We see a range of numbers but have no clear indication that it is an age category|
+|3. |The table data does not tell to us what the data represents, and how it is related to the graph|
+|4. |The title of the graph does not lead the readers to understand what is to be represented in the graph|
+|5. |The vertical reference line does not match up to the age category data points, as the age category is a range but the median age is an absolute number|
+|6. |The data indicates the month of June. Does it mean that this is the particular data in the month of June, or this is a data for the year?|
+
+
+
+
+|Aesthetics|Critique|
+|---|--------|
+|1. |The white fonts in the table are not easily read, and the table could have been on a clear background for easier visuals|
+|2. |The font for "Median Age in June 2009" and "Median Age in June 2019" is not consistent. One is bold and one is not|
+|3. |The grey background of the chart is not appealing on a white page, and should be on a white background for a cleaner look|
+
+
+
+**b. With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design try to overcome. **
+
+![Sketch of Proposed Design](images/sketch.png)
+
+|No. |Improvements|
+|---|--------|
+|1. |A line graph is drawn for 2009 and 2019 Labour Force Participation Rate (%), to be able to see the trend between the years easily.It helps us have a visual representation that 2019 has a higher labour participation rate than 2009, indicating a larger workforce, but also an older workforce|
+|2. |A bar graph of the change in LPFR Rate (Percentage Point), between 2019 and 2009 is drawn with a dual axis. The bar graph represents the rate of change of the labour force participation rate from 2009 to 2019. The higher the bar graph, the larger the change|
+|3. |The charts are colour coded for easier visualisation of the positive and negative changes in the labour force participation rates. This allows us to easier visualise where the negative growth are|
+
+
+**c. Using Tableau, design the proposed data visualization. **
+
+![Proposed Tableau Design](images/tableau.png)
+
+This is the proposed design for an improved visualisation of the Labour Force Participation Rate. It allows us to see the overall participation rate per Age category, and also the Percentage Point change per Age category. This gives us a holistic view of the situation.
+
+
+**d. Provide step-by-step description on how the data visualization was prepared. **
+
+

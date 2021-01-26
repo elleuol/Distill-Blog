@@ -1,7 +1,10 @@
 ---
 title: "About this blog"
 description: |
-  Some additional details about the blog
+  ISSS608 Visual Analytics 2021 Term 2
+  
+  
+  Works of Louelle Teo
 ---
 
 ```{r setup, include=FALSE}
