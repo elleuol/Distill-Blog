@@ -139,4 +139,7 @@ knitr::include_graphics("images/Step10.png")
 knitr::include_graphics("images/Step11.png")
 ```
 
-![](https://youtu.be/MuHbofOWVVg)
+![Dataviz Makeover 1](https://www.youtube.com/watch?v=MuHbofOWVVg&feature=youtu.be&ab_channel=LouelleTeo)
+
+<iframe width="560" height="315" src="https://youtu.be/MuHbofOWVVg" frameborder="0" allowfullscreen></iframe>
+
