@@ -16,7 +16,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Presently, this is the graph presented by the Ministry of Manpower on the Labour Participation Rate in 2009 and 2019
+Presently, this is the graph presented by the Ministry of Manpower on the Labour Force Participation Rate in 2009 and 2019
 
 ```{r, echo=FALSE, fig.cap="Resident Labour Force by Age", fig.align='center',layout="l-body-outset",dpi=200}
 knitr::include_graphics("images/dataviz1-chart6.png")
@@ -24,11 +24,11 @@ knitr::include_graphics("images/dataviz1-chart6.png")
 
 ---
 
-**What Does This Graph Do Wrong?**
+## **Graph Critiques**
 
 
 |Clarity|Critique|
-|---|--------|
+|-|--------|
 |1. |The missing Y-axis does not identify what are the measured values in the graph. We are therefore unable to interpret what the line graphs stand for|
 |2. |The missing X-axis Labels does not indicate what are the category representation. We see a range of numbers but have no clear indication that it is an age category|
 |3. |The table data does not tell to us what the data represents, and how it is related to the graph|
@@ -40,14 +40,14 @@ knitr::include_graphics("images/dataviz1-chart6.png")
 
 
 |Aesthetics|Critique|
-|---|--------|
+|-|--------|
 |1. |The white fonts in the table are not easily read, and the table could have been on a clear background for easier visuals|
 |2. |The font for "Median Age in June 2009" and "Median Age in June 2019" is not consistent. One is bold and one is not|
 |3. |The grey background of the chart is not appealing on a white page, and should be on a white background for a cleaner look|
 
 ---
 
-**What Can Be Improved?**
+## **What Can Be Improved?**
 
 ```{r, echo=FALSE, fig.cap="Sketch of Proposed Design", fig.align='center',dpi=200}
 knitr::include_graphics("images/sketch.png")
@@ -55,14 +55,14 @@ knitr::include_graphics("images/sketch.png")
 
 
 |No. |Improvements|
-|---|--------|
+|-|--------|
 |1. |A line graph is drawn for 2009 and 2019 Labour Force Participation Rate (%), to be able to see the trend between the years easily.It helps us have a visual representation that 2019 has a higher labour participation rate than 2009, indicating a larger workforce, but also an older workforce|
 |2. |A bar graph of the change in LPFR Rate (Percentage Point), between 2019 and 2009 is drawn with a dual axis. The bar graph represents the rate of change of the labour force participation rate from 2009 to 2019. The higher the bar graph, the larger the change|
 |3. |The charts are colour coded for easier visualisation of the positive and negative changes in the labour force participation rates. This allows us to easier visualise where the negative growth are|
 
 ---
 
-**Proposed Tableau visualisation**
+## **Proposed Tableau Visualisation**
 
 ```{r, echo=FALSE, fig.cap="Proposed Tableau Design", fig.align='center',layout="l-body-outset",dpi=200, fig.width=12, fig.height=6}
 knitr::include_graphics("images/tableau.png")
@@ -79,7 +79,7 @@ The biggest growth in the labour force is seen at Age category 60 and above. It 
 
 ---
 
-**Step by Step Guide to Prepare the Tableau Visualisation**
+## **Step by Step Guide to Prepare the Tableau Visualisation**
 
 ```{r, echo=FALSE, fig.cap="Original Dataset", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/Originaldata.png")
@@ -191,13 +191,31 @@ knitr::include_graphics("images/Step11.png")
 
 ---
 
-**Major Observations**
-
-|No.|Observations|
-|---|--------|
-|1. |Labour Force Participation Rate in Age Category **20 -24** fell *2.5%* from 2009 to 2019. As we understand that Singapore's birth rate is falling, and we are an ageing population, this fall in LFPR could indicate a smaller workforce of that age group. However, we also understand that the government has provided various avenues to allow students to pursue tertiary education through increased vacancies in Polytechnics, and Universities. Therefore, the reduction in labour force at Age **20-24** may indicate that many have chosen to continue tertiary education.|
-|2. |Labour Force Participation Rate in Age Category **30 -34** to **50-54**, increased between *3.80%* to *5.80%*. This steady increase over the decade could be due to more foreigners choosing to work in Singapore and unfortunately, Singaporeans alone, is unable to fill all required roles in the workforce. As our economy grows, so do manpower needs.|
-|3. |The biggest growth in the Labour Force Participation Rate is in Age Category **60 and above**. The growth is roughly *3 to 4* times higher than other age cateogries, indicating that more people are choosing to stay actively employed, rather than retire. There may be a few social impacts to this choice, where people are insecure in retiring due to the rising cost of living in Singapor. Many may feel that they are not financially secure to stop working. Next, our population could also be healthier and stronger despite being older, and many could choose to continue working because they feel that they want to continue contributing to the economy.|
+## **Major Observations**
 
 
+***Inferences from the data***
 
+Labour Force Participation Rate in Age Category **20 -24** fell *2.5%* from 2009 to 2019. As we understand that Singapore's birth rate is falling, and we are an aging population, this fall in LFPR could indicate a smaller workforce of that age group. However, we also understand that the government has provided various avenues to allow students to pursue tertiary education through increased vacancies in Polytechnics, and Universities. Therefore, the reduction in labour force at Age **20-24** may indicate that many have chosen to continue tertiary education.
+
+Labour Force Participation Rate in Age Category **30 -34** to **50-54**, increased between *3.80%* to *5.80%*. This steady increase over the decade could be due to more foreigners choosing to work in Singapore and unfortunately, Singaporeans alone, is unable to fill all required roles in the workforce. As our economy grows, so do manpower needs.
+
+The biggest growth in the Labour Force Participation Rate is in Age Category **60 and above**. The growth is roughly *3 to 4* times higher than other age categories, indicating that more people are choosing to stay actively employed, rather than retire. There may be a few social impacts to this choice, where maybe people are insecure in retiring due to the rising cost of living in Singapore. Many may feel that they are not financially secure to stop working. Or, our population could also be healthier and stronger despite being older, and many could choose to continue working because they feel that they want to continue contributing to the economy.
+
+***Observations from the visuals***
+
+*Graph choices:* It is easier for the human eye to visualise percentage point changes through bar graphs that specifically highlight it. Line graphs do not aid the growing gaps as well.
+
+*Colour:* It is also easier for the human eye to recognise a negative growth value if the colour is red. It helps highlight the outliers quicker and faster. Different colour line graphs also help divide the datasets easier and quicker.
+
+*Labels:* Labels help to guide the human eye to line representations quicker without having to check back to the legend.
+
+*Annotations:* Graph annotations help paint the story quickly, without the reader needing to read the write up. It sends the message of the visuals in a point form, through a quick glance.
+
+***Marrying the Two***
+
+Data may tell us only one point of view, therefore it is important to manipulate it to provide greater insights. Through calculating **Changes in LFPR (Percentage Point)**, we are able to identify that there is *4 times* more growth of the labour force for **Age Category 60 and above**.
+
+Next, using these manipulated data, we can therefore provide better visualisations for readers. It reduces the need for people to understand and inteprete the graphs on their own, but gives them the needed inferences immediately.
+
+Understanding the storytelling is more important than having great visuals and great data. It can easily change the perception and impressions of people if done right.
