@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-assignment-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-assignment-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-assignment-1_files/desktop.ini","dataviz-makeover-assignment-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-assignment-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-assignment-1_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/dataviz1-chart6.png","images/desktop.ini","images/sketch.png","images/tableau.png"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-assignment-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-assignment-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-assignment-1_files/desktop.ini","dataviz-makeover-assignment-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-assignment-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-assignment-1_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/cleaneddata.png","images/dataviz1-chart6.png","images/desktop.ini","images/mrsd_2019LabourForce_T5(1).xlsx","images/Originaldata.png","images/sketch.png","images/Step1.png","images/step10.png","images/step11.png","images/Step2.png","images/step3.png","images/step4.png","images/step5.png","images/step6.png","images/step7.png","images/step8.png","images/step9.png","images/tableau.png","video/desktop.ini","video/tableauvid.mp4"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2051,10 +2051,15 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Presently, this is the graph presented by the Ministry of Manpower on the Labour Participation Rate in 2009 and</p>
-<figure>
-<img src="images/dataviz1-chart6.png" alt="" /><figcaption>Chart6, Resident labour force by age</figcaption>
-</figure>
+<p>Presently, this is the graph presented by the Ministry of Manpower on the Labour Participation Rate in 2009 and 2019</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="images/dataviz1-chart6.png" alt="Resident Labour Force by Age" width="421" />
+<p class="caption">
+Figure 1: Resident Labour Force by Age
+</p>
+</div>
+</div>
 <p><strong>The Task</strong></p>
 <p><strong>a. Critic the graph from both its clarity and aesthetics. At least three from each evaluation criterion.</strong></p>
 <table>
@@ -2122,9 +2127,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </tbody>
 </table>
 <p><strong>b. With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design try to overcome. </strong></p>
-<figure>
-<img src="images/sketch.png" alt="" /><figcaption>Sketch of Proposed Design</figcaption>
-</figure>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="images/sketch.png" alt="Sketch of Proposed Design" width="528" />
+<p class="caption">
+Figure 2: Sketch of Proposed Design
+</p>
+</div>
+</div>
 <table>
 <colgroup>
 <col style="width: 27%" />
@@ -2152,11 +2162,113 @@ document.addEventListener('DOMContentLoaded', function() {
 </tbody>
 </table>
 <p><strong>c. Using Tableau, design the proposed data visualization. </strong></p>
-<figure>
-<img src="images/tableau.png" alt="" /><figcaption>Proposed Tableau Design</figcaption>
-</figure>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="images/tableau.png" alt="Proposed Tableau Design" width="1092" />
+<p class="caption">
+Figure 3: Proposed Tableau Design
+</p>
+</div>
+</div>
 <p>This is the proposed design for an improved visualisation of the Labour Force Participation Rate. It allows us to see the overall participation rate per Age category, and also the Percentage Point change per Age category. This gives us a holistic view of the situation.</p>
 <p><strong>d. Provide step-by-step description on how the data visualization was prepared. </strong></p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="images/Originaldata.png" alt="Original Dataset" width="584" />
+<p class="caption">
+Figure 4: Original Dataset
+</p>
+</div>
+</div>
+<p>The original dataset is presented in this table format, with many blank cells and data we are not interested in. Therefore it is important to clean the dataset before we port it to tableau.</p>
+<ol type="1">
+<li><p>Delete off the empty cells</p></li>
+<li><p>Exclude data from Rows 19 onwards, and Row 6</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="images/cleaneddata.png" alt="Cleaned Dataset" width="510" />
+<p class="caption">
+Figure 5: Cleaned Dataset
+</p>
+</div>
+</div>
+<p>The cleaned data selected are the age categories, and dataset between 2009 and 2019.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="images/Step1.png" alt="Importing Dataset" width="960" />
+<p class="caption">
+Figure 6: Importing Dataset
+</p>
+</div>
+</div>
+<p>Import the dataset into Tableau using <strong>Connect</strong>, <strong>To a File</strong>, <strong>Microsoft Excel</strong> Choose the data file of interest and click <strong>Open</strong></p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="images/Step2.png" alt="Selecting Dataset" width="656" />
+<p class="caption">
+Figure 7: Selecting Dataset
+</p>
+</div>
+</div>
+<p>Drag the cleaned data set into the orange box</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<img src="images/step3.png" alt="Rename Columns" width="488" />
+<p class="caption">
+Figure 8: Rename Columns
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<img src="images/step5.png" alt="Pivot Dataset" width="582" />
+<p class="caption">
+Figure 9: Pivot Dataset
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
+<img src="images/step6.png" alt="Rename and Reassign Categories" width="172" />
+<p class="caption">
+Figure 10: Rename and Reassign Categories
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<img src="images/step8.png" alt="Add back Cleaned Dataset" width="515" />
+<p class="caption">
+Figure 11: Add back Cleaned Dataset
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
+<img src="images/step9.png" alt="Create Calculated Field- Changes in LFPR (Percentage Point)" width="460" />
+<p class="caption">
+Figure 12: Create Calculated Field- Changes in LFPR (Percentage Point)
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<img src="images/step10.png" alt="Formula of Calculated Field" width="468" />
+<p class="caption">
+Figure 13: Formula of Calculated Field
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
+<img src="images/step11.png" alt="Tableau Visual" width="960" />
+<p class="caption">
+Figure 14: Tableau Visual
+</p>
+</div>
+</div>
+<p><img src="https://youtu.be/MuHbofOWVVg" /></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

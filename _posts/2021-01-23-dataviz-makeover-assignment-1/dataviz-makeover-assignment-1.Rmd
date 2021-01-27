@@ -16,9 +16,13 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Presently, this is the graph presented by the Ministry of Manpower on the Labour Participation Rate in 2009 and
+Presently, this is the graph presented by the Ministry of Manpower on the Labour Participation Rate in 2009 and 2019
 
-![Chart6, Resident labour force by age](images/dataviz1-chart6.png)
+```{r, echo=FALSE, fig.cap="Resident Labour Force by Age", fig.align='center',layout="l-body-outset",dpi=200}
+knitr::include_graphics("images/dataviz1-chart6.png")
+```
+
+
 
 **The Task**
 
@@ -47,7 +51,10 @@ Presently, this is the graph presented by the Ministry of Manpower on the Labour
 
 **b. With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design try to overcome. **
 
-![Sketch of Proposed Design](images/sketch.png)
+```{r, echo=FALSE, fig.cap="Sketch of Proposed Design", fig.align='center',dpi=200}
+knitr::include_graphics("images/sketch.png")
+```
+
 
 |No. |Improvements|
 |---|--------|
@@ -58,11 +65,78 @@ Presently, this is the graph presented by the Ministry of Manpower on the Labour
 
 **c. Using Tableau, design the proposed data visualization. **
 
-![Proposed Tableau Design](images/tableau.png)
+```{r, echo=FALSE, fig.cap="Proposed Tableau Design", fig.align='center',layout="l-body-outset",dpi=200, fig.width=12, fig.height=6}
+knitr::include_graphics("images/tableau.png")
+```
+
 
 This is the proposed design for an improved visualisation of the Labour Force Participation Rate. It allows us to see the overall participation rate per Age category, and also the Percentage Point change per Age category. This gives us a holistic view of the situation.
 
 
 **d. Provide step-by-step description on how the data visualization was prepared. **
 
+```{r, echo=FALSE, fig.cap="Original Dataset", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Originaldata.png")
+```
 
+The original dataset is presented in this table format, with many blank cells and data we are not interested in. Therefore it is important to clean the dataset before we port it to tableau.
+
+1. Delete off the empty cells
+
+2. Exclude data from Rows 19 onwards, and Row 6
+
+```{r, echo=FALSE, fig.cap="Cleaned Dataset", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/cleaneddata.png")
+```
+
+
+The cleaned data selected are the age categories, and dataset between 2009 and 2019.
+
+```{r, echo=FALSE, fig.cap="Importing Dataset", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Step1.png")
+```
+
+
+Import the dataset into Tableau using **Connect**, **To a File**, **Microsoft Excel**
+Choose the data file of interest and click **Open**
+
+```{r, echo=FALSE, fig.cap="Selecting Dataset", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Step2.png")
+```
+
+Drag the cleaned data set into the orange box
+
+
+```{r, echo=FALSE, fig.cap="Rename Columns", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Step3.png")
+```
+
+```{r, echo=FALSE, fig.cap="Pivot Dataset", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Step5.png")
+```
+
+```{r, echo=FALSE, fig.cap="Rename and Reassign Categories", fig.align='center' }
+knitr::include_graphics("images/Step6.png")
+```
+
+
+```{r, echo=FALSE, fig.cap="Add back Cleaned Dataset", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Step8.png")
+```
+
+
+```{r, echo=FALSE, fig.cap="Create Calculated Field- Changes in LFPR (Percentage Point)", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Step9.png")
+```
+
+
+```{r, echo=FALSE, fig.cap="Formula of Calculated Field", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Step10.png")
+```
+
+
+```{r, echo=FALSE, fig.cap="Tableau Visual", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Step11.png")
+```
+
+![](https://youtu.be/MuHbofOWVVg)
