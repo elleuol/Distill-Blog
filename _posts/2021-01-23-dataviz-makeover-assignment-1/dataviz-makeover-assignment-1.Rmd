@@ -64,7 +64,7 @@ knitr::include_graphics("images/sketch.png")
 
 ## **Proposed Tableau Visualisation**
 
-```{r, echo=FALSE, fig.cap="Proposed Tableau Design", fig.align='center',layout="l-body-outset",dpi=200, fig.width=12, fig.height=6}
+```{r, echo=FALSE, fig.cap="Proposed Tableau Design", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/tableau.png")
 ```
 
@@ -184,7 +184,7 @@ Finally, we are ready to plot the graphs.
 
 **Final Product**
 
-```{r, echo=FALSE, fig.cap="Final Product - Tableau Visual", fig.align='center'}
+```{r, echo=FALSE, fig.cap="Final Product - Tableau Visual", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/Step11.png")
 ```
 
