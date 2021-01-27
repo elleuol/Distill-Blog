@@ -70,6 +70,7 @@ knitr::include_graphics("images/tableau.png")
 
 
 This is the proposed design for an improved visualisation of the Labour Force Participation Rate. It allows us to see the overall participation rate per Age category, and also the Percentage Point change per Age category. This gives us a holistic view of the situation.
+
 On the left axis, it is represented by the **Labour Force Participation Rate (%)**, denoted by the line graph. As you can see, the line diverges at Age Category 25-29, indicating that a higher percentage of the population has remained in active employment.
 
 On the right axis, it is represented by the **Change in LPFR (Percentage Point)**, denoted by the bar graphs. The bar graph shows us that at Age 20-24, there is a negative growth of youths in the labour force. This could mean that many more youths are choosing to further their education rather than enter the workforce early.
