@@ -57,7 +57,7 @@ knitr::include_graphics("images/sketch.png")
 |No. |Improvements|
 |-|--------|
 |1. |A line graph is drawn for 2009 and 2019 Labour Force Participation Rate (%), to be able to see the trend between the years easily.It helps us have a visual representation that 2019 has a higher labour participation rate than 2009, indicating a larger workforce, but also an older workforce|
-|2. |A bar graph of the change in LPFR Rate (Percentage Point), between 2019 and 2009 is drawn with a dual axis. The bar graph represents the rate of change of the labour force participation rate from 2009 to 2019. The higher the bar graph, the larger the change|
+|2. |A bar graph of the change in LPFR Rate (Percentage Point), between 2019 and 2009 is drawn with a dual axis. The bar graph represents the change of the labour force participation rate from 2009 to 2019. The higher the bar graph, the larger the change|
 |3. |The charts are colour coded for easier visualisation of the positive and negative changes in the labour force participation rates. This allows us to easier visualise where the negative growth are|
 
 ---
@@ -73,7 +73,7 @@ This is the proposed design for an improved visualisation of the Labour Force Pa
 
 On the left axis, it is represented by the **Labour Force Participation Rate (%)**, denoted by the line graph. As you can see, the line diverges at Age Category 25-29, indicating that a higher percentage of the population has remained in active employment.
 
-On the right axis, it is represented by the **Change in LPFR (Percentage Point)**, denoted by the bar graphs. The bar graph shows us that at Age 20-24, there is a negative growth of youths in the labour force. This could mean that many more youths are choosing to further their education rather than enter the workforce early.
+On the right axis, it is represented by the **Change in LPFR (Percentage Point)**, denoted by the bar graphs. The bar graph shows us that at Age 20-24, there is a negative growth of youths in the labour force. This could mean that many more youths are choosing to further their education rather than enter the workforce early, or that Singapore's birth rate has been declining.
 
 The biggest growth in the labour force is seen at Age category 60 and above. It indicates that the population is retiring later, and many chooses to continue being in active employment well into their retirement years. It could also indicate that many feel they are unable to afford retirement due to the rising cost of living.
 
