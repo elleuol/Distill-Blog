@@ -86,621 +86,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>LOUELLE VISUAL ANALYSIS: Dataviz Makeover</title>
+  <title>Dataviz Makeover 2</title>
+  
+  <meta property="description" itemprop="description" content="A short description of the post."/>
   
   
-  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-02-14"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-14"/>
+  <meta name="article:author" content="Louelle Teo"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="LOUELLE VISUAL ANALYSIS: Dataviz Makeover"/>
+  <meta property="og:title" content="Dataviz Makeover 2"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="A short description of the post."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="LOUELLE VISUAL ANALYSIS"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="LOUELLE VISUAL ANALYSIS: Dataviz Makeover"/>
+  <meta property="twitter:title" content="Dataviz Makeover 2"/>
+  <meta property="twitter:description" content="A short description of the post."/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["Dataviz Makeover"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"character","attributes":{},"value":["2021-01-23-dataviz-makeover-assignment-1","2021-02-14-dataviz-makeover-2"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Dataviz Makeover 2"]},{"type":"character","attributes":{},"value":["A short description of the post.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Louelle Teo"]},{"type":"character","attributes":{},"value":["https://linkedin.com/in/louelleteo"]}]}]},{"type":"character","attributes":{},"value":["02-14-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/desktop.ini","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/desktop.ini","images/Original.png","images/sketch.png","images/step1.1.png","images/step1.2.png","images/step1.3.png","images/step1.4.png","images/step1.png","images/step10.png","images/step11.png","images/step12.png","images/step13.png","images/step14.png","images/step15.png","images/step16.png","images/step17.png","images/step18.png","images/step19.png","images/step2.png","images/step20.png","images/step21.png","images/step22.png","images/step3.png","images/step4.png","images/step5.png","images/step6.png","images/step7.png","images/step8.png","images/step9.png","images/tableau.png"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-  
-  <script type="application/javascript">
-  
-    window.headroom_prevent_pin = false;
-  
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-  
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-  
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-  
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-  
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-  
-  <style type="text/css">
-  
-  /* Theme (user-documented overrideables for nav appearance) */
-  
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .distill-site-nav a:hover {
-    color: white;
-  }
-  
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-  
-  .distill-site-header {
-  
-  }
-  
-  .distill-site-footer {
-  
-  }
-  
-  
-  /* Site Header */
-  
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-  
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-  
-  
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-  
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-  
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-  
-  .distill-site-header .logo {
-    padding: 0;
-  }
-  
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-  
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-  
-  
-  
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-  
-  
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-  
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-  
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-  
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-dropdown-active {
-    display: block;
-  }
-  
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-  
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-  
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-  
-  /* Site Footer */
-  
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-  
-  /* Headroom */
-  
-  d-title {
-    padding-top: 6rem;
-  }
-  
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-  
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-  
-  .headroom--unpinned {
-    top: -100px;
-  }
-  
-  .headroom--pinned {
-    top: 0;
-  }
-  
-  </style>
-  
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-  
-  <script type="application/javascript">
-  
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-  
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-  
-  function createFuseIndex() {
-  
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-  
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-  
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-  
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-  
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-  
-    createFuseIndex()
-      .then(function(fuse) {
-  
-        // make search box visible
-        searchEl.classList.remove('hidden');
-  
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-              .filter(function(item) { return !!item.description; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description}
-                  </div>
-                  <div class="search-item-preview">
-                    <img src="${suggestion.preview ? offsetURL(suggestion.preview) : ''}"</img>
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  
-  });
-  
-  </script>
-  
-  <style type="text/css">
-  
-  /* Algolioa Autocomplete */
-  
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-  
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-  
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-  
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  </style>
-  
-  
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
   
@@ -1986,230 +1404,372 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
   
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="dataviz-makeover-2_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Dataviz Makeover","authors":[]}
+{"title":"Dataviz Makeover 2","description":"A short description of the post.","authors":[{"author":"Louelle Teo","authorURL":"https://linkedin.com/in/louelleteo","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-02-14T00:00:00.000+08:00","citationText":"Teo, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">LOUELLE VISUAL ANALYSIS</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="dataviz.html">Dataviz Makeover</a>
-<a href="vap.html">Visual Analytics Project</a>
-<a href="about.html">About</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Dataviz Makeover">Dataviz Makeover</h1>
-<a href="posts/2021-01-23-dataviz-makeover-assignment-1/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 23, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Louelle Teo</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-01-23-dataviz-makeover-assignment-1/images/dataviz1-chart6.png"/>
-</div>
-<div class="description">
-<h2>Dataviz Makeover Assignment 1</h2>
-<div class="dt-tags"></div>
-<p>Improving the Data Visualisation of the Resident Labour Force by Age Chart, by MOM</p>
-</div>
-</a>
-<a href="posts/2021-02-14-dataviz-makeover-2/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Feb. 14, 2021</div>
-<div class="dt-authors">
-<div class="dt-author">Louelle Teo</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2021-02-14-dataviz-makeover-2/images/Original.png"/>
-</div>
-<div class="description">
-<h2>Dataviz Makeover 2</h2>
-<div class="dt-tags"></div>
-<p>A short description of the post.</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Dataviz Makeover</h1>
+<h1>Dataviz Makeover 2</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>A short description of the post.</p></p>
 </div>
 
+<div class="d-byline">
+  Louelle Teo <a href="https://linkedin.com/in/louelleteo" class="uri">https://linkedin.com/in/louelleteo</a> 
+  
+<br/>02-14-2021
+</div>
 
 <div class="d-article">
+<p>Presently, this is the graph presented by a Research Scientist to understand the willingness of the public on Covid-19 vaccination.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="images/Original.png" alt="Which country is more pro vaccine?" width="368" />
+<p class="caption">
+Figure 1: Which country is more pro vaccine?
+</p>
+</div>
+</div>
+<hr />
+<h2 id="graph-critiques"><strong>Graph Critiques</strong></h2>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Clarity</th>
+<th>Critique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>The legend of Vac 1 does not advise what “Vac 1” stands for, and also does not advise what “2”, “3”, “4” stands for</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>The colour of the graph on the left is hard to distinguish clearly, on which is “disagreed” vs “agreed”.</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>The title of the graph on the left does not relate to the questions of the count. What is the population Strongly Agreeing/Strongly Disagreeing to?</td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td>The right graph is a repeat of the left graph, but sorted. It does not provide new information from the left, except for an easy visualisation of the sorted countries.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aesthetics</th>
+<th>Critique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>The colour of the graph on the left is not appealing and clear on the message it is trying to address.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-can-be-improved"><strong>What Can Be Improved?</strong></h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="images/sketch.png" alt="Sketch of Proposed Design" width="534" />
+<p class="caption">
+Figure 2: Sketch of Proposed Design
+</p>
+</div>
+</div>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>No.</th>
+<th>Improvements</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>A scatterplot graph is drawn on the top left to give broad overview on where all countries stand in terms of covid confidence. It plots a score on the Y-axis on the willingness of the country to get the Covid19 Vaccine, and a score on the x-axis, the trust they have in their government to provide an effective vaccine.</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>A dropdown question bar on the top is created so that we can view different public sentiments with regards to their willingness to take the vaccine, and their confidence and worries about it.</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>A filter box on the right allows user to toggle between the different countries, and choose which countries they are interested to view.</td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td>Various barcharts are drawn to depict the sentiments based on different categories, such as Employment Status, Household size, Number of Household Children, Age Group and Gender.</td>
+</tr>
+<tr class="odd">
+<td>5.</td>
+<td>The barchart colours are changed to Red and Blue to dipict Disagree and Agree so that we are able to visualise better the polarities of the sentiments.</td>
+</tr>
+<tr class="even">
+<td>6.</td>
+<td>Neutral responses are excluded so that we are able to view the polarities better in a country.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="proposed-tableau-visualisation"><strong>Proposed Tableau Visualisation</strong></h2>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="images/tableau.png" alt="Proposed Tableau Design" width="164" />
+<p class="caption">
+Figure 3: Proposed Tableau Design
+</p>
+</div>
+</div>
+<hr />
+<h2 id="step-by-step-guide-to-prepare-the-tableau-visualisation"><strong>Step by Step Guide to Prepare the Tableau Visualisation</strong></h2>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="images/step1.png" alt="Original Dataset" width="216" />
+<p class="caption">
+Figure 4: Original Dataset
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="images/step1.1.png" alt="Combine Datasets using JMP Pro 15.2" width="960" />
+<p class="caption">
+Figure 5: Combine Datasets using JMP Pro 15.2
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="images/step1.2.png" alt="Concatenate Sheets" width="376" />
+<p class="caption">
+Figure 6: Concatenate Sheets
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="images/step1.3.png" alt="Export Combined Dataset" width="958" />
+<p class="caption">
+Figure 7: Export Combined Dataset
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<img src="images/step1.4.png" alt="Export to Microsoft Excel" width="543" />
+<p class="caption">
+Figure 8: Export to Microsoft Excel
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<img src="images/step2.png" alt="Add Combined Dataset to Tableau &amp; exclude uninterested variables" width="589" />
+<p class="caption">
+Figure 9: Add Combined Dataset to Tableau &amp; exclude uninterested variables
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
+<img src="images/step3.png" alt="Update Variables to correct format" width="430" />
+<p class="caption">
+Figure 10: Update Variables to correct format
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<img src="images/step4.png" alt="Create Calculated Field of Vac 1 Score" width="406" />
+<p class="caption">
+Figure 11: Create Calculated Field of Vac 1 Score
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
+<img src="images/step5.png" alt="Create Calculated Field of Vac2 3  Score" width="402" />
+<p class="caption">
+Figure 12: Create Calculated Field of Vac2 3 Score
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<img src="images/step6.png" alt="Overview of Country's Confidence in Covid19 Vaccine" width="461" />
+<p class="caption">
+Figure 13: Overview of Country’s Confidence in Covid19 Vaccine
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
+<img src="images/step7.png" alt="Calculate Average of Vac2 3 Score" width="402" />
+<p class="caption">
+Figure 14: Calculate Average of Vac2 3 Score
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<img src="images/step8.png" alt="Create Parameter" width="399" />
+<p class="caption">
+Figure 15: Create Parameter
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
+<img src="images/step9.png" alt="Parameter Questions" width="618" />
+<p class="caption">
+Figure 16: Parameter Questions
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
+<img src="images/step10.png" alt="Create Calculated Field for Parameter Questions" width="406" />
+<p class="caption">
+Figure 17: Create Calculated Field for Parameter Questions
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
+<img src="images/step11.png" alt="Parameter Codes for the Questions" width="499" />
+<p class="caption">
+Figure 18: Parameter Codes for the Questions
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-19"></span>
+<img src="images/step12.png" alt="Bar Chart of Questions vs Employment Status" width="462" />
+<p class="caption">
+Figure 19: Bar Chart of Questions vs Employment Status
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-20"></span>
+<img src="images/step13.png" alt="Questions Format Using Table Calculations" width="397" />
+<p class="caption">
+Figure 20: Questions Format Using Table Calculations
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
+<img src="images/step14.png" alt="Exclude Neutral Responses" width="372" />
+<p class="caption">
+Figure 21: Exclude Neutral Responses
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-22"></span>
+<img src="images/step15.png" alt="Add Country Filter" width="404" />
+<p class="caption">
+Figure 22: Add Country Filter
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
+<img src="images/step16.png" alt="Select Multiple Values (List)" width="396" />
+<p class="caption">
+Figure 23: Select Multiple Values (List)
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
+<img src="images/step17.png" alt="Show Parameter in Legend" width="400" />
+<p class="caption">
+Figure 24: Show Parameter in Legend
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<img src="images/step18.png" alt="Barchart of Questions vs Gender" width="380" />
+<p class="caption">
+Figure 25: Barchart of Questions vs Gender
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
+<img src="images/step19.png" alt="Barchart of Questions vs Household Size" width="380" />
+<p class="caption">
+Figure 26: Barchart of Questions vs Household Size
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
+<img src="images/step20.png" alt="Barchart of Questions vs Household Children" width="380" />
+<p class="caption">
+Figure 27: Barchart of Questions vs Household Children
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
+<img src="images/step21.png" alt="Barchart of Questions vs Age Group" width="380" />
+<p class="caption">
+Figure 28: Barchart of Questions vs Age Group
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
+<img src="images/step22.png" alt="Add all Sheets to Dashboard" width="519" />
+<p class="caption">
+Figure 29: Add all Sheets to Dashboard
+</p>
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
