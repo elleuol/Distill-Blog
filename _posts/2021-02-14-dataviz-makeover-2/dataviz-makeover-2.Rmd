@@ -32,12 +32,15 @@ knitr::include_graphics("images/Original.png")
 |1. |The legend of Vac 1 does not advise what "Vac 1" stands for, and also does not advise what "2", "3", "4" stands for|
 |2. |The colour of the graph on the left is hard to distinguish clearly, on which is "disagreed" vs "agreed". |
 |3. |The title of the graph on the left does not relate to the questions of the count. What is the population Strongly Agreeing/Strongly Disagreeing to?|
-|4. | The right graph is a repeat of the left graph, but sorted. It does not provide new information from the left, except for an easy visualisation of the sorted countries.|
+|4. | The right graph is a repeat of the left graph, but sorted. It does not provide new information from the left, except for an easy visualisation of the sorted countries.It should show the confidence interval of strongly agreed|
+|5. | The x-axis of the graph on the right ends before the barchart ends. We are unable to identify what percentage of United Kingdom is.|
 
 
 |Aesthetics|Critique|
 |-|--------|
 |1. |The colour of the graph on the left is not appealing and clear on the message it is trying to address.|
+|2. | The left graph axis has no decimal point, while the right graph has a decimal point on the x axis. It is not consistent.|
+|3. |The name of the countries are all small caps. It should start with Capital Letters|
 
 
 ---
@@ -51,137 +54,330 @@ knitr::include_graphics("images/sketch.png")
 
 |No. |Improvements|
 |-|--------|
-|1. | A scatterplot graph is drawn on the top left to give broad overview on where all countries stand in terms of covid confidence. It plots a score on the Y-axis on the willingness of the country to get the Covid19 Vaccine, and a score on the x-axis, the trust they have in their government to provide an effective vaccine.|
+|1. | A scatterplot graph is drawn on the top left to give broad overview on where all countries stand in terms of covid confidence. It plots a score on the Y-axis on scores of the questions chosen, and a score on the x-axis, the willingness of the respondents on takint the vaccine.|
 |2. | A dropdown question bar on the top is created so that we can view different public sentiments with regards to their willingness to take the vaccine, and their confidence and worries about it.|
 |3. | A filter box on the right allows user to toggle between the different countries, and choose which countries they are interested to view.|
-|4. | Various barcharts are drawn to depict the sentiments based on different categories, such as Employment Status, Household size, Number of Household Children, Age Group and Gender.|
-|5. | The barchart colours are changed to Red and Blue to dipict Disagree and Agree so that we are able to visualise better the polarities of the sentiments.|
-|6. | Neutral responses are excluded so that we are able to view the polarities better in a country.|
+|4. | Various confidence intervals are drawn to depict the sentiments based on different categories, such as Employment Status, Household size, Number of Household Children, Age Group and Gender.|
+
 
 ---
 
 ## **Proposed Tableau Visualisation**
 
 ```{r, echo=FALSE, fig.cap="Proposed Tableau Design", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
-knitr::include_graphics("images/tableau.png")
+knitr::include_graphics("images/tableau2.png")
 ```
 
 ---
 
 ## **Step by Step Guide to Prepare the Tableau Visualisation**
 
+### Preparing the Dataset
+
 ```{r, echo=FALSE, fig.cap="Original Dataset", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step1.png")
 ```
 
+Dataset is downloaded from *Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub* hosted at Github. It contains individual files from various countries who have conducted surveys on their population.
 
 ```{r, echo=FALSE, fig.cap="Combine Datasets using JMP Pro 15.2", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step1.1.png")
 ```
 
+As we are drawing a graph to compare the different countries, we have to combine the files into 1 large dataset. We will use JMP Pro 15.2 to do this as it uses a small amount of computer memory to fulfill this task. This task can also be done with Tableau Prep Builder using the *Union* feature. 
 
 ```{r, echo=FALSE, fig.cap="Concatenate Sheets", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step1.2.png")
 ```
 
+Add the various *country csv files*, tick the box **Create Source column**, and click **OK**.
+
 ```{r, echo=FALSE, fig.cap="Export Combined Dataset", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step1.3.png")
 ```
+
+Delete off variables that are not of interest. Keep variables that represent the demographics of the responders, and also **Vac_XX** variables.
+Export the JMP Pro file back to excel format by clicking, **File, Export.**
 
 ```{r, echo=FALSE, fig.cap="Export to Microsoft Excel", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step1.4.png")
 ```
 
+Choose **Microsoft Excel** and click **Next**. Save file.
 
 ```{r, echo=FALSE, fig.cap="Add Combined Dataset to Tableau & exclude uninterested variables", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step2.png")
 ```
 
+Open the *Combined Excel Dataset* with *Tableau 2020.4*. The variables chosen are as above.
 
 ```{r, echo=FALSE, fig.cap="Update Variables to correct format", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step3.png")
 ```
 
-```{r, echo=FALSE, fig.cap="Create Calculated Field of Vac 1 Score", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step4.png")
-```
+Update the variables to the correct format.
 
-```{r, echo=FALSE, fig.cap="Create Calculated Field of Vac2 3  Score", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step5.png")
-```
+- For **End Time**, update to **Date** format.
+- For **Vac 1**, update to **String** format.
+- For **Source Table**, update to **Geographic Role, Country/Region** and rename to **Country**. 
 
-```{r, echo=FALSE, fig.cap="Overview of Country's Confidence in Covid19 Vaccine", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step6.png")
-```
-
-```{r, echo=FALSE, fig.cap="Calculate Average of Vac2 3 Score", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step7.png")
-```
+### Creating Parameters for Questions Dropdown
 
 ```{r, echo=FALSE, fig.cap="Create Parameter", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step8.png")
 ```
 
+*Right Click* Parameters and choose **Create Parameter**
+
 ```{r, echo=FALSE, fig.cap="Parameter Questions", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step9.png")
 ```
+
+Edit the Parameter as the above to create various questions that the user can choose in an interactive way.
 
 ```{r, echo=FALSE, fig.cap="Create Calculated Field for Parameter Questions", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step10.png")
 ```
 
+Next, we want to link a calculated field to the parameter questions. Click on **Analysis**, followed by **Create Calculated Field**
+
 ```{r, echo=FALSE, fig.cap="Parameter Codes for the Questions", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step11.png")
 ```
 
-```{r, echo=FALSE, fig.cap="Bar Chart of Questions vs Employment Status", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step12.png")
+Create **Questions** Calculated Field and key in the formula as above. This help links the parameter to the variables.
+
+### Update Aliases
+
+```{r, echo=FALSE, fig.cap="Create Aliases", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/alias1.png")
 ```
+
+Right click the variables to update the aliases so that when it is plotted the dataset is clearer.
+Update **Vac 1**, **Questions** and **Country** columns to the aliases as above.
+
+### Creating Calculated Fields for Scatterplot
+
+```{r, echo=FALSE, fig.cap="Create Calculated Field of Vac 1 Score", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/step4.png")
+```
+
+Next, we will create **Vac 1 Score** using the **Create Calculated Field**. This score will help update the *String* format of **Vac 1** into a *Number* format so that we can plot a scatterplot.
+
+To do this, click **Analysis** followed by **Create Calculated Field** and type in the formula as above.
+
+```{r, echo=FALSE, fig.cap="Create Calculated Field of Vac2 3  Score", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/questionscore.png")
+```
+
+Do the same steps as above for **Questions** to create **Question Score**
+
+### Creating Calculated Fields for 95% Confidence Interval
+
+```{r, echo=FALSE, fig.cap="95 Confidence Constant", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/z95.png")
+```
+
+Create **Z_95%** Calculated Field
+
+```{r, echo=FALSE, fig.cap="Total Number of Records", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/records.png")
+```
+
+Create **Number of Records** Calculated Field
+
+```{r, echo=FALSE, fig.cap="Only Strongly Agree", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/onlystronglyagree.png")
+```
+
+Create **Only Strongly Agree** Calculated Field
+
+```{r, echo=FALSE, fig.cap="Proportion", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/Prop.png")
+```
+
+Create **Proportion** Calculated Field
+
+```{r, echo=FALSE, fig.cap="Prop SE", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/propse.png")
+```
+
+Create **Prop_SE** Calculated Field
+
+```{r, echo=FALSE, fig.cap="Proportion Margin of Error", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/propmarginoferror.png")
+```
+
+Create **Prop_Margin of Error 95%** Calculated Field
+
+```{r, echo=FALSE, fig.cap="Proportion Lower Limit", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/proplower.png")
+```
+
+Create **Prop_Lower Limit 95%** Calculated Field
+
+```{r, echo=FALSE, fig.cap="Proportion Upper Limit", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/propupper.png")
+```
+
+Create **Prop_Upper Limit 95%** Calculated Field
+
+### Creating Groups
+
+```{r, echo=FALSE, fig.cap="Variable Groups", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/group1.png")
+```
+
+*Right Click* **Age**, followed by **Create** and **Group**.
+
+- Group the Age groups according to the picture above.
+
+Continue the same steps for **Household Size** and **Household Children**.
+
+### Creating Tooltips
+
+Next we will be creating graphs for the tooltips so that this information will appear when a user hovers over the scatterplot.
+
+```{r, echo=FALSE, fig.cap="Tooltip Graph 1", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/tooltip1.png")
+```
+
+- Add **Number of Records** to Columns.Update *Measure* to *Sum*.
+- Add **Questions** to Rows.
+- Add **Number of Records** to *Labels*, and update *Quick Table Calculation*, and *Percent of Total*.
+- Add **Questions** to *Colour*.
+- Add **Country** to *Filter*, and right click *Show Filter*.
+
+```{r, echo=FALSE, fig.cap="Tooltip Graph 2", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/tooltip2.png")
+```
+
+- Add **Number of Records** to Columns.Update *Measure* to *Sum*.
+- Add **Vac 1** to Rows.
+- Add **Number of Records** to *Labels*, and update *Quick Table Calculation*, and *Percent of Total*.
+- Add **Vac 1** to *Colour*.
+- Add **Country** to *Filter*, and right click *Show Filter*.
+
+### Creating the Overview Tab
+
+```{r, echo=FALSE, fig.cap="Overview of Country's Confidence in Covid19 Vaccine", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/overview.png")
+```
+
+- Drag **Questions Score** to **Rows**
+
+- Drag **Vac 1 Score** to **Columns**
+
+- Drag **Country** to **Filter**, also to **Colour** and **Labels**
+
+- Right Click **Country** on the **Filter** tab and click **Show Filter**
+
+- Under the drop down bar in **Marks**, choose **Shape**.
+
+- Right Click on **Parameters** and choose **Show Parameters**.
+
+
+```{r, echo=FALSE, fig.cap="Calculate Average of Vac2 3 Score", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/step7.png")
+```
+
+Right Click on **Vac1 Score** and choose **Measure, Average**
+
+Right Click on **Question Score** and choose **Measure, Average**
+
+```{r, echo=FALSE, fig.cap="Adding Tooltips to Overview Tab", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/tooltip3.png")
+```
+
+Click on *Tooltips* to insert the tooltips graphs created earlier.
+Sheets can be added by using the *Insert* button, and inserting the Tooltip sheets created as above.
+
+### Creating Employment Status Strongly Agree 95% Confidence Interval
+
+```{r, echo=FALSE, fig.cap="Bar Chart of Questions vs Employment Status", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/employmentci.png")
+```
+
+- Add **Prop** and **Measure Values** to *Columns*
+- Drag **Employment Status** to *Rows*
+- Drag **Country** to *Filters*
 
 ```{r, echo=FALSE, fig.cap="Questions Format Using Table Calculations", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step13.png")
+knitr::include_graphics("images/cisteps.png")
 ```
-
-```{r, echo=FALSE, fig.cap="Exclude Neutral Responses", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step14.png")
-```
+- Right click **Measured Values** and click *Dual Axis*
+- Right click the x-axis of the graph, and click *synchronise axis*
+- Remove all extra variables in *Measure Values* till only **AGG(Pro_Lower Limit 95%)** and **AGG(Prop_Upper Limit 95% )** is left.
+- Under the *AGG(Prop)* in the *Marks* tab, drag **Measure Names** to *Colour*
+- Under the *Measure Values* in the *Marks* tab, drag **Measure Names** to *Path*
 
 ```{r, echo=FALSE, fig.cap="Add Country Filter", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step15.png")
 ```
 
+- Right click **Country** and click *Show Filter*
+
 ```{r, echo=FALSE, fig.cap="Select Multiple Values (List)", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step16.png")
 ```
+
+Right click the country filter and change the type to *Multiple Values(list)*
 
 ```{r, echo=FALSE, fig.cap="Show Parameter in Legend", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step17.png")
 ```
 
-```{r, echo=FALSE, fig.cap="Barchart of Questions vs Gender", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step18.png")
+Right click **Questions** and click *Show Parameter*
+
+### Creating Gender Strongly Agree 95% Confidence Interval
+
+```{r, echo=FALSE, fig.cap="Confidence Interval of Questions vs Gender", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/genderci.png")
 ```
 
-```{r, echo=FALSE, fig.cap="Barchart of Questions vs Household Size", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step19.png")
+Repeat the same steps as **Employment Confidence Interval** for **Gender Confidence Interval**
+
+### Creating Household Size Strongly Agree 95% Confidence Interval
+
+```{r, echo=FALSE, fig.cap="Confidence Interval of Household Size", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/householdsizeci.png")
 ```
 
-```{r, echo=FALSE, fig.cap="Barchart of Questions vs Household Children", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step20.png")
+Repeat the same steps as **Employment Confidence Interval** for **Household Size Confidence Interval**
+
+### Creating Household children Strongly Agree 95% Confidence Interval
+
+```{r, echo=FALSE, fig.cap="Confidence Interval of Household Children", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/householdchildrenci.png")
 ```
 
-```{r, echo=FALSE, fig.cap="Barchart of Questions vs Age Group", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step21.png")
+Repeat the same steps as **Employment Confidence Interval** for **Household Children Confidence Interval**
+
+### Creating Age Strongly Agree 95% Confidence Interval
+
+```{r, echo=FALSE, fig.cap="Confidence Interval of Age Group", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/agegroupci.png")
 ```
+
+Repeat the same steps as **Employment Confidence Interval** for **Age Group Confidence Interval**
+
+### Creating Dashboard
 
 ```{r, echo=FALSE, fig.cap="Add all Sheets to Dashboard", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/step22.png")
+knitr::include_graphics("images/tableau3.png")
+```
+- Create a Dashboard by clicking on **Dashboard** on the menu bar, followed by **New Dashboard**
+- Drag all the following sheets to the spaces in the Dashboard
+
+```{r, echo=FALSE, fig.cap="Add Questions Bar to Dashboard", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/dashboard2.png")
 ```
 
+Click on the dropdown bar of the scatterplot to add *Parameters, Questions*
+Drag the **Questions** bar to the top of the dashboard.
+With that, we are done with the Tableau!
 
-
-
-
+---
 
 
 
