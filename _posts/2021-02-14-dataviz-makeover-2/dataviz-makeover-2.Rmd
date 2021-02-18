@@ -68,6 +68,9 @@ knitr::include_graphics("images/sketch.png")
 knitr::include_graphics("images/tableau2.png")
 ```
 
+An interactive experience can be found at this link:
+https://public.tableau.com/profile/louelle.teo#!/vizhome/Covid19_Sentiments/Dashboard2?publish=yes
+
 ---
 
 # **Step by Step Guide to Prepare the Tableau Visualisation**
