@@ -1,7 +1,7 @@
 ---
 title: "Dataviz Makeover 2"
 description: |
-  A short description of the post.
+  A visualisation on a Country's confidence in the Covid19 Vaccine
 author:
   - name: Louelle Teo
     url: https://linkedin.com/in/louelleteo
@@ -24,28 +24,28 @@ knitr::include_graphics("images/Original.png")
 
 ---
 
-## **Graph Critiques**
+# **Graph Critiques**
 
 
 |Clarity|Critique|
 |-|--------|
-|1. |The legend of Vac 1 does not advise what "Vac 1" stands for, and also does not advise what "2", "3", "4" stands for|
-|2. |The colour of the graph on the left is hard to distinguish clearly, on which is "disagreed" vs "agreed". |
-|3. |The title of the graph on the left does not relate to the questions of the count. What is the population Strongly Agreeing/Strongly Disagreeing to?|
-|4. | The right graph is a repeat of the left graph, but sorted. It does not provide new information from the left, except for an easy visualisation of the sorted countries.It should show the confidence interval of strongly agreed|
-|5. | The x-axis of the graph on the right ends before the barchart ends. We are unable to identify what percentage of United Kingdom is.|
+|1. |The legend of Vac 1 does not advise what "Vac 1" stands for, and also does not advise what "2", "3", "4" stands for. This will mislead viewers from understanding what the bar graphs stand for and how to inteprete the data|
+|2. |The title of the graph on the left does not relate to the questions of the count. What is the population Strongly Agreeing/Strongly Disagreeing to? Are they agreeing to be Pro Vaccine? Or is the population strongly agreeing to take the Covid19 Vaccine once available to them? The title could be clearer in identifying the focus.|
+|3. | The right graph is a repeat of the left graph, but sorted by Strongly Agree Percentages. It does not provide new information from the left, except for an easy visualisation of the sorted countries.It should show the confidence interval of strongly agreed, or the|
+|4. | The x-axis of the graph on the right ends before the barchart ends. We are unable to identify what percentage of United Kingdom is. The x-axis should end where the data ends for clear representation of the datapoints.|
 
 
 |Aesthetics|Critique|
 |-|--------|
-|1. |The colour of the graph on the left is not appealing and clear on the message it is trying to address.|
-|2. | The left graph axis has no decimal point, while the right graph has a decimal point on the x axis. It is not consistent.|
-|3. |The name of the countries are all small caps. It should start with Capital Letters|
+|1. |The colour of the graph on the left is hard to distinguish clearly, on which is "disagreed" vs "agreed". It does not give a good visual cue on the separations between the agreed and disagreed crowd. Therefore it does not help viewers easily identify the polarities in each country |
+|2. | The left graph axis has no decimal point, while the right graph has a decimal point on the x axis. It is not consistent. We should keep both axis consistent as they are representing the same data|
+|3. |The name of the countries are all small caps. It should start with Capital Letters for appropriate naming|
+|4. | There is a spelling error in the Title chart of the graph on the left. It should be checked and improved to prevent spelling errors for a more professional look.|
 
 
 ---
 
-## **What Can Be Improved?**
+# **What Can Be Improved?**
 
 ```{r, echo=FALSE, fig.cap="Sketch of Proposed Design", fig.align='center',dpi=200}
 knitr::include_graphics("images/sketch.png")
@@ -56,13 +56,13 @@ knitr::include_graphics("images/sketch.png")
 |-|--------|
 |1. | A scatterplot graph is drawn on the top left to give broad overview on where all countries stand in terms of covid confidence. It plots a score on the Y-axis on scores of the questions chosen, and a score on the x-axis, the willingness of the respondents on takint the vaccine.|
 |2. | A dropdown question bar on the top is created so that we can view different public sentiments with regards to their willingness to take the vaccine, and their confidence and worries about it.|
-|3. | A filter box on the right allows user to toggle between the different countries, and choose which countries they are interested to view.|
-|4. | Various confidence intervals are drawn to depict the sentiments based on different categories, such as Employment Status, Household size, Number of Household Children, Age Group and Gender.|
+|3. | A filter box on the right allows user to toggle between the different countries, and choose which countries they are interested to view. They can view individual countries, or continents, or regions by choosing the Countries of interest.|
+|4. | Various confidence intervals are drawn to depict the sentiments based on different categories, such as Employment Status, Household size, Number of Household Children, Age Group and Gender. We are then able to focus on which group of people requires more convincing in taking the vaccine, and which are ready to take it upon distribution.|
 
 
 ---
 
-## **Proposed Tableau Visualisation**
+# **Proposed Tableau Visualisation**
 
 ```{r, echo=FALSE, fig.cap="Proposed Tableau Design", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/tableau2.png")
@@ -70,9 +70,9 @@ knitr::include_graphics("images/tableau2.png")
 
 ---
 
-## **Step by Step Guide to Prepare the Tableau Visualisation**
+# **Step by Step Guide to Prepare the Tableau Visualisation**
 
-### Preparing the Dataset
+## Preparing the Dataset
 
 ```{r, echo=FALSE, fig.cap="Original Dataset", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step1.png")
@@ -121,7 +121,7 @@ Update the variables to the correct format.
 - For **Vac 1**, update to **String** format.
 - For **Source Table**, update to **Geographic Role, Country/Region** and rename to **Country**. 
 
-### Creating Parameters for Questions Dropdown
+## Creating Parameters for Questions Dropdown
 
 ```{r, echo=FALSE, fig.cap="Create Parameter", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step8.png")
@@ -147,7 +147,7 @@ knitr::include_graphics("images/step11.png")
 
 Create **Questions** Calculated Field and key in the formula as above. This help links the parameter to the variables.
 
-### Update Aliases
+## Update Aliases
 
 ```{r, echo=FALSE, fig.cap="Create Aliases", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/alias1.png")
@@ -156,7 +156,7 @@ knitr::include_graphics("images/alias1.png")
 Right click the variables to update the aliases so that when it is plotted the dataset is clearer.
 Update **Vac 1**, **Questions** and **Country** columns to the aliases as above.
 
-### Creating Calculated Fields for Scatterplot
+## Creating Calculated Fields for Scatterplot
 
 ```{r, echo=FALSE, fig.cap="Create Calculated Field of Vac 1 Score", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/step4.png")
@@ -172,7 +172,7 @@ knitr::include_graphics("images/questionscore.png")
 
 Do the same steps as above for **Questions** to create **Question Score**
 
-### Creating Calculated Fields for 95% Confidence Interval
+## Creating Calculated Fields for 95% Confidence Interval
 
 ```{r, echo=FALSE, fig.cap="95 Confidence Constant", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/z95.png")
@@ -222,7 +222,7 @@ knitr::include_graphics("images/propupper.png")
 
 Create **Prop_Upper Limit 95%** Calculated Field
 
-### Creating Groups
+## Creating Groups
 
 ```{r, echo=FALSE, fig.cap="Variable Groups", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/group1.png")
@@ -234,7 +234,7 @@ knitr::include_graphics("images/group1.png")
 
 Continue the same steps for **Household Size** and **Household Children**.
 
-### Creating Tooltips
+## Creating Tooltips
 
 Next we will be creating graphs for the tooltips so that this information will appear when a user hovers over the scatterplot.
 
@@ -258,7 +258,7 @@ knitr::include_graphics("images/tooltip2.png")
 - Add **Vac 1** to *Colour*.
 - Add **Country** to *Filter*, and right click *Show Filter*.
 
-### Creating the Overview Tab
+## Creating the Overview Tab
 
 ```{r, echo=FALSE, fig.cap="Overview of Country's Confidence in Covid19 Vaccine", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/overview.png")
@@ -292,7 +292,7 @@ knitr::include_graphics("images/tooltip3.png")
 Click on *Tooltips* to insert the tooltips graphs created earlier.
 Sheets can be added by using the *Insert* button, and inserting the Tooltip sheets created as above.
 
-### Creating Employment Status Strongly Agree 95% Confidence Interval
+## Creating Employment Status Strongly Agree 95% Confidence Interval
 
 ```{r, echo=FALSE, fig.cap="Bar Chart of Questions vs Employment Status", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/employmentci.png")
@@ -329,7 +329,7 @@ knitr::include_graphics("images/step17.png")
 
 Right click **Questions** and click *Show Parameter*
 
-### Creating Gender Strongly Agree 95% Confidence Interval
+## Creating Gender Strongly Agree 95% Confidence Interval
 
 ```{r, echo=FALSE, fig.cap="Confidence Interval of Questions vs Gender", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/genderci.png")
@@ -337,7 +337,7 @@ knitr::include_graphics("images/genderci.png")
 
 Repeat the same steps as **Employment Confidence Interval** for **Gender Confidence Interval**
 
-### Creating Household Size Strongly Agree 95% Confidence Interval
+## Creating Household Size Strongly Agree 95% Confidence Interval
 
 ```{r, echo=FALSE, fig.cap="Confidence Interval of Household Size", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/householdsizeci.png")
@@ -345,7 +345,7 @@ knitr::include_graphics("images/householdsizeci.png")
 
 Repeat the same steps as **Employment Confidence Interval** for **Household Size Confidence Interval**
 
-### Creating Household children Strongly Agree 95% Confidence Interval
+## Creating Household children Strongly Agree 95% Confidence Interval
 
 ```{r, echo=FALSE, fig.cap="Confidence Interval of Household Children", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/householdchildrenci.png")
@@ -353,7 +353,7 @@ knitr::include_graphics("images/householdchildrenci.png")
 
 Repeat the same steps as **Employment Confidence Interval** for **Household Children Confidence Interval**
 
-### Creating Age Strongly Agree 95% Confidence Interval
+## Creating Age Strongly Agree 95% Confidence Interval
 
 ```{r, echo=FALSE, fig.cap="Confidence Interval of Age Group", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/agegroupci.png")
@@ -361,7 +361,7 @@ knitr::include_graphics("images/agegroupci.png")
 
 Repeat the same steps as **Employment Confidence Interval** for **Age Group Confidence Interval**
 
-### Creating Dashboard
+## Creating Dashboard
 
 ```{r, echo=FALSE, fig.cap="Add all Sheets to Dashboard", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/tableau3.png")
@@ -379,9 +379,13 @@ With that, we are done with the Tableau!
 
 ---
 
+# Major Observations
 
+***1. I am worried about the potential side effects of a Covid19 vaccine***
 
-
+```{r, echo=FALSE, fig.cap="Add Questions Bar to Dashboard", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/observation1.png")
+```
 
 
 
