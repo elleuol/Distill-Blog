@@ -31,7 +31,7 @@ knitr::include_graphics("images/Original.png")
 |-|--------|
 |1. |The legend of Vac 1 does not advise what "Vac 1" stands for, and also does not advise what "2", "3", "4" stands for. This will mislead viewers from understanding what the bar graphs stand for and how to inteprete the data|
 |2. |The title of the graph on the left does not relate to the questions of the count. What is the population Strongly Agreeing/Strongly Disagreeing to? Are they agreeing to be Pro Vaccine? Or is the population strongly agreeing to take the Covid19 Vaccine once available to them? The title could be clearer in identifying the focus.|
-|3. | The right graph is a repeat of the left graph, but sorted by Strongly Agree Percentages. It does not provide new information from the left, except for an easy visualisation of the sorted countries.It should show the confidence interval of strongly agreed, or the|
+|3. | The right graph is a repeat of the left graph, but sorted by Strongly Agree Percentages. It does not provide new information from the left, except for an easy visualisation of the sorted countries.It should show the confidence interval of strongly agreed, or the different demographics of the population.|
 |4. | The x-axis of the graph on the right ends before the barchart ends. We are unable to identify what percentage of United Kingdom is. The x-axis should end where the data ends for clear representation of the datapoints.|
 
 
@@ -361,20 +361,43 @@ With that, we are done with the Tableau!
 
 # Major Observations
 
-***1. I am worried about the potential side effects of a Covid19 vaccine***
+***1. Young versus Old ***
 
-```{r, echo=FALSE, fig.cap="Add Questions Bar to Dashboard", fig.align='center',layout="l-body-outset"}
+```{r, echo=FALSE, fig.cap="Young versus Old", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/observation1.png")
 ```
+Older generation of 66 & above, inferred to be the retired population are more pro-vaccine. A higher proportion of them are more agreeable to taking the Covid19 Vaccine, and also have higher trust that their government will provide an effective vaccine. Lastly, they are less worried of the potential side effects of the vaccine.
 
+The younger generation, however, are overall less agreeable to take the Covid19 vaccine.They have less trust in the government providing an effective vaccine, and are more worried of the potential side effect of the vaccine
 
+The most important inference as to why the older generation feels this way, is because for the past 1 year, it is noted that the most vulnerable population to Covid19 are the elderly, and those with pre-existing health conditions.
 
+The biggest casualty of the pandemic tends to be a higher proportionate of elderly population, as their immune system are not as strong and robust as the younger generation. It is also noted that the older population are also more susceptible in catching the virus, as compared to the younger generation. It is seen in the last charts, that the younger generation is not as worried in getting Covid19, as the elderly population.
 
+Therefore we see the trend globally that the elderly population are more open and agreeable to taking the Covid19 vaccine.
 
+***2. Large Household with more than 3 Children versus Small Household with 0-2 Children***
 
+```{r, echo=FALSE, fig.cap="Large Household with more than 3 Children versus Small Household with 0-2 Children", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/observation2.png")
+```
 
+It is noted that larger household with more than 3 children are more worried about the side effects of the Covid19 vaccine, and are less likely to take the vaccine.
 
+Whereas, smaller household with 0 to 2 children are less worried about the side effects of the Covid19 vaccine, and more likely to take the vaccine.
 
+The conclusion we can gather from this data is quite surprising. As we understand that children under the age of 18 are not going to be vaccinated, they will not be protected from Covid19. However, the parents are most afraid of the potential side effects of the vaccine. The conclusion drawn is that parents may be afraid of side effects the vaccine may cause, that may hinder them from continuing to take care of their children.
 
+The solution to this matter would probably to allow the general population to take the vaccine and offer the vaccine to parents after some time, so that they may witness the efficacy, and safety of the vaccine.
 
+***3. Correlations between different countries***
 
+```{r, echo=FALSE, fig.cap="Correlations between different countries", fig.align='center',layout="l-body-outset"}
+knitr::include_graphics("images/observation3.png")
+```
+
+From the scatterplots above, we can infer that a countries effectiveness in convincing the population to get vaccinated is strongly correlated to the trust they have in the government.
+
+If a country trusts the government to provide an effective vaccine, they are more likely to get vaccinated. Therefore it is important that governments continue to communicate and be transparent with their nation. This will help build greater trust and confidence in the vaccines.
+
+However, it is also noted that there is a weak relationship between being worried of getting Covid19, and wanting to take the vaccine immediately. Therefore the fear of catching Covid19 will not fuel the confidence in people to take the vaccine.
