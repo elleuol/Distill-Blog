@@ -54,7 +54,7 @@ knitr::include_graphics("images/sketch.png")
 
 |No. |Improvements|
 |-|--------|
-|1. | A scatterplot graph is drawn on the top left to give broad overview on where all countries stand in terms of covid confidence. It plots a score on the Y-axis on scores of the questions chosen, and a score on the x-axis, the willingness of the respondents on takint the vaccine.|
+|1. | A scatterplot graph is drawn on the top left to give broad overview on where all countries stand in terms of covid confidence. It plots a score on the Y-axis on scores of the questions chosen, and a score on the x-axis, the willingness of the respondents in taking the vaccine.|
 |2. | A dropdown question bar on the top is created so that we can view different public sentiments with regards to their willingness to take the vaccine, and their confidence and worries about it.|
 |3. | A filter box on the right allows user to toggle between the different countries, and choose which countries they are interested to view. They can view individual countries, or continents, or regions by choosing the Countries of interest.|
 |4. | Various confidence intervals are drawn to depict the sentiments based on different categories, such as Employment Status, Household size, Number of Household Children, Age Group and Gender. We are then able to focus on which group of people requires more convincing in taking the vaccine, and which are ready to take it upon distribution.|
@@ -166,10 +166,6 @@ Next, we will create **Vac 1 Score** using the **Create Calculated Field**. This
 
 To do this, click **Analysis** followed by **Create Calculated Field** and type in the formula as above.
 
-```{r, echo=FALSE, fig.cap="Create Calculated Field of Vac2 3  Score", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/questionscore.png")
-```
-
 Do the same steps as above for **Questions** to create **Question Score**
 
 ## Creating Calculated Fields for 95% Confidence Interval
@@ -178,49 +174,33 @@ Do the same steps as above for **Questions** to create **Question Score**
 knitr::include_graphics("images/z95.png")
 ```
 
-Create **Z_95%** Calculated Field
+- Create **Z_95%** Calculated Field
 
-```{r, echo=FALSE, fig.cap="Total Number of Records", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/records.png")
-```
-
-Create **Number of Records** Calculated Field
+- Create **Number of Records** Calculated Field
 
 ```{r, echo=FALSE, fig.cap="Only Strongly Agree", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/onlystronglyagree.png")
 ```
 
-Create **Only Strongly Agree** Calculated Field
+- Create **Only Strongly Agree** Calculated Field
 
-```{r, echo=FALSE, fig.cap="Proportion", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/Prop.png")
-```
-
-Create **Proportion** Calculated Field
+- Create **Proportion** Calculated Field
 
 ```{r, echo=FALSE, fig.cap="Prop SE", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/propse.png")
 ```
 
-Create **Prop_SE** Calculated Field
+- Create **Prop_SE** Calculated Field
 
-```{r, echo=FALSE, fig.cap="Proportion Margin of Error", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/propmarginoferror.png")
-```
-
-Create **Prop_Margin of Error 95%** Calculated Field
+- Create **Prop_Margin of Error 95%** Calculated Field
 
 ```{r, echo=FALSE, fig.cap="Proportion Lower Limit", fig.align='center',layout="l-body-outset"}
 knitr::include_graphics("images/proplower.png")
 ```
 
-Create **Prop_Lower Limit 95%** Calculated Field
+- Create **Prop_Lower Limit 95%** Calculated Field
 
-```{r, echo=FALSE, fig.cap="Proportion Upper Limit", fig.align='center',layout="l-body-outset"}
-knitr::include_graphics("images/propupper.png")
-```
-
-Create **Prop_Upper Limit 95%** Calculated Field
+- Create **Prop_Upper Limit 95%** Calculated Field
 
 ## Creating Groups
 

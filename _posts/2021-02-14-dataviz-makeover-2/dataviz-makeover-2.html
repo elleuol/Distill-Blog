@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/desktop.ini","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/agegroupci.png","images/alias1.png","images/cisteps.png","images/dashboard2.png","images/desktop.ini","images/employmentci.png","images/genderci.png","images/group1.png","images/householdchildrenci.png","images/householdsizeci.png","images/onlystronglyagree.png","images/Original.png","images/overview.png","images/Prop.png","images/proplower.png","images/propmarginoferror.png","images/propse.png","images/propupper.png","images/questions1.png","images/questionscore.png","images/records.png","images/sketch.png","images/step1.1.png","images/step1.2.png","images/step1.3.png","images/step1.4.png","images/step1.png","images/step10.png","images/step11.png","images/step12.png","images/step13.png","images/step14.png","images/step15.png","images/step16.png","images/step17.png","images/step18.png","images/step19.png","images/step2.png","images/step20.png","images/step21.png","images/step22.png","images/step3.png","images/step4.png","images/step5.png","images/step6.png","images/step7.png","images/step8.png","images/step9.png","images/tableau.png","images/tableau2.png","images/tableau3.png","images/tooltip1.png","images/tooltip2.png","images/tooltip3.png","images/vac1 score.png","images/z95.png"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/desktop.ini","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/agegroupci.png","images/alias1.png","images/cisteps.png","images/dashboard2.png","images/desktop.ini","images/employmentci.png","images/genderci.png","images/group1.png","images/householdchildrenci.png","images/householdsizeci.png","images/Observation1.png","images/onlystronglyagree.png","images/Original.png","images/overview.png","images/Prop.png","images/proplower.png","images/propmarginoferror.png","images/propse.png","images/propupper.png","images/questions1.png","images/questionscore.png","images/records.png","images/sketch.png","images/step1.1.png","images/step1.2.png","images/step1.3.png","images/step1.4.png","images/step1.png","images/step10.png","images/step11.png","images/step12.png","images/step13.png","images/step14.png","images/step15.png","images/step16.png","images/step17.png","images/step18.png","images/step19.png","images/step2.png","images/step20.png","images/step21.png","images/step22.png","images/step3.png","images/step4.png","images/step5.png","images/step6.png","images/step7.png","images/step8.png","images/step9.png","images/tableau.png","images/tableau2.png","images/tableau3.png","images/tooltip1.png","images/tooltip2.png","images/tooltip3.png","images/vac1 score.png","images/z95.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1538,7 +1538,7 @@ Figure 2: Sketch of Proposed Design
 <tbody>
 <tr class="odd">
 <td>1.</td>
-<td>A scatterplot graph is drawn on the top left to give broad overview on where all countries stand in terms of covid confidence. It plots a score on the Y-axis on scores of the questions chosen, and a score on the x-axis, the willingness of the respondents on takint the vaccine.</td>
+<td>A scatterplot graph is drawn on the top left to give broad overview on where all countries stand in terms of covid confidence. It plots a score on the Y-axis on scores of the questions chosen, and a score on the x-axis, the willingness of the respondents in taking the vaccine.</td>
 </tr>
 <tr class="even">
 <td>2.</td>
@@ -1685,7 +1685,7 @@ Figure 15: Create Aliases
 <h2 id="creating-calculated-fields-for-scatterplot">Creating Calculated Fields for Scatterplot</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
-<img src="images/step4.png" alt="Create Calculated Field of Vac 1 Score" width="406" />
+<img src="images/step4.png" alt="Create Calculated Field of Vac 1 Score" width="506" />
 <p class="caption">
 Figure 16: Create Calculated Field of Vac 1 Score
 </p>
@@ -1693,94 +1693,62 @@ Figure 16: Create Calculated Field of Vac 1 Score
 </div>
 <p>Next, we will create <strong>Vac 1 Score</strong> using the <strong>Create Calculated Field</strong>. This score will help update the <em>String</em> format of <strong>Vac 1</strong> into a <em>Number</em> format so that we can plot a scatterplot.</p>
 <p>To do this, click <strong>Analysis</strong> followed by <strong>Create Calculated Field</strong> and type in the formula as above.</p>
-<div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
-<img src="images/questionscore.png" alt="Create Calculated Field of Vac2 3  Score" width="408" />
-<p class="caption">
-Figure 17: Create Calculated Field of Vac2 3 Score
-</p>
-</div>
-</div>
 <p>Do the same steps as above for <strong>Questions</strong> to create <strong>Question Score</strong></p>
 <h2 id="creating-calculated-fields-for-95-confidence-interval">Creating Calculated Fields for 95% Confidence Interval</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
-<img src="images/z95.png" alt="95 Confidence Constant" width="409" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
+<img src="images/z95.png" alt="95 Confidence Constant" width="504" />
 <p class="caption">
-Figure 18: 95 Confidence Constant
+Figure 17: 95 Confidence Constant
 </p>
 </div>
 </div>
-<p>Create <strong>Z_95%</strong> Calculated Field</p>
+<ul>
+<li><p>Create <strong>Z_95%</strong> Calculated Field</p></li>
+<li><p>Create <strong>Number of Records</strong> Calculated Field</p></li>
+</ul>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
+<img src="images/onlystronglyagree.png" alt="Only Strongly Agree" width="498" />
+<p class="caption">
+Figure 18: Only Strongly Agree
+</p>
+</div>
+</div>
+<ul>
+<li><p>Create <strong>Only Strongly Agree</strong> Calculated Field</p></li>
+<li><p>Create <strong>Proportion</strong> Calculated Field</p></li>
+</ul>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-19"></span>
-<img src="images/records.png" alt="Total Number of Records" width="408" />
+<img src="images/propse.png" alt="Prop SE" width="499" />
 <p class="caption">
-Figure 19: Total Number of Records
+Figure 19: Prop SE
 </p>
 </div>
 </div>
-<p>Create <strong>Number of Records</strong> Calculated Field</p>
+<ul>
+<li><p>Create <strong>Prop_SE</strong> Calculated Field</p></li>
+<li><p>Create <strong>Prop_Margin of Error 95%</strong> Calculated Field</p></li>
+</ul>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-20"></span>
-<img src="images/onlystronglyagree.png" alt="Only Strongly Agree" width="409" />
+<img src="images/proplower.png" alt="Proportion Lower Limit" width="498" />
 <p class="caption">
-Figure 20: Only Strongly Agree
+Figure 20: Proportion Lower Limit
 </p>
 </div>
 </div>
-<p>Create <strong>Only Strongly Agree</strong> Calculated Field</p>
-<div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
-<img src="images/Prop.png" alt="Proportion" width="408" />
-<p class="caption">
-Figure 21: Proportion
-</p>
-</div>
-</div>
-<p>Create <strong>Proportion</strong> Calculated Field</p>
-<div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-22"></span>
-<img src="images/propse.png" alt="Prop SE" width="408" />
-<p class="caption">
-Figure 22: Prop SE
-</p>
-</div>
-</div>
-<p>Create <strong>Prop_SE</strong> Calculated Field</p>
-<div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
-<img src="images/propmarginoferror.png" alt="Proportion Margin of Error" width="406" />
-<p class="caption">
-Figure 23: Proportion Margin of Error
-</p>
-</div>
-</div>
-<p>Create <strong>Prop_Margin of Error 95%</strong> Calculated Field</p>
-<div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
-<img src="images/proplower.png" alt="Proportion Lower Limit" width="409" />
-<p class="caption">
-Figure 24: Proportion Lower Limit
-</p>
-</div>
-</div>
-<p>Create <strong>Prop_Lower Limit 95%</strong> Calculated Field</p>
-<div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
-<img src="images/propupper.png" alt="Proportion Upper Limit" width="407" />
-<p class="caption">
-Figure 25: Proportion Upper Limit
-</p>
-</div>
-</div>
-<p>Create <strong>Prop_Upper Limit 95%</strong> Calculated Field</p>
+<ul>
+<li><p>Create <strong>Prop_Lower Limit 95%</strong> Calculated Field</p></li>
+<li><p>Create <strong>Prop_Upper Limit 95%</strong> Calculated Field</p></li>
+</ul>
 <h2 id="creating-groups">Creating Groups</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
 <img src="images/group1.png" alt="Variable Groups" width="399" />
 <p class="caption">
-Figure 26: Variable Groups
+Figure 21: Variable Groups
 </p>
 </div>
 </div>
@@ -1792,10 +1760,10 @@ Figure 26: Variable Groups
 <h2 id="creating-tooltips">Creating Tooltips</h2>
 <p>Next we will be creating graphs for the tooltips so that this information will appear when a user hovers over the scatterplot.</p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-22"></span>
 <img src="images/tooltip1.png" alt="Tooltip Graph 1" width="554" />
 <p class="caption">
-Figure 27: Tooltip Graph 1
+Figure 22: Tooltip Graph 1
 </p>
 </div>
 </div>
@@ -1807,10 +1775,10 @@ Figure 27: Tooltip Graph 1
 <li>Add <strong>Country</strong> to <em>Filter</em>, and right click <em>Show Filter</em>.</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
 <img src="images/tooltip2.png" alt="Tooltip Graph 2" width="554" />
 <p class="caption">
-Figure 28: Tooltip Graph 2
+Figure 23: Tooltip Graph 2
 </p>
 </div>
 </div>
@@ -1823,10 +1791,10 @@ Figure 28: Tooltip Graph 2
 </ul>
 <h2 id="creating-the-overview-tab">Creating the Overview Tab</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
 <img src="images/overview.png" alt="Overview of Country's Confidence in Covid19 Vaccine" width="852" />
 <p class="caption">
-Figure 29: Overview of Country’s Confidence in Covid19 Vaccine
+Figure 24: Overview of Country’s Confidence in Covid19 Vaccine
 </p>
 </div>
 </div>
@@ -1839,30 +1807,30 @@ Figure 29: Overview of Country’s Confidence in Covid19 Vaccine
 <li><p>Right Click on <strong>Parameters</strong> and choose <strong>Show Parameters</strong>.</p></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-30"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
 <img src="images/step7.png" alt="Calculate Average of Vac2 3 Score" width="406" />
 <p class="caption">
-Figure 30: Calculate Average of Vac2 3 Score
+Figure 25: Calculate Average of Vac2 3 Score
 </p>
 </div>
 </div>
 <p>Right Click on <strong>Vac1 Score</strong> and choose <strong>Measure, Average</strong></p>
 <p>Right Click on <strong>Question Score</strong> and choose <strong>Measure, Average</strong></p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-31"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
 <img src="images/tooltip3.png" alt="Adding Tooltips to Overview Tab" width="510" />
 <p class="caption">
-Figure 31: Adding Tooltips to Overview Tab
+Figure 26: Adding Tooltips to Overview Tab
 </p>
 </div>
 </div>
 <p>Click on <em>Tooltips</em> to insert the tooltips graphs created earlier. Sheets can be added by using the <em>Insert</em> button, and inserting the Tooltip sheets created as above.</p>
 <h2 id="creating-employment-status-strongly-agree-95-confidence-interval">Creating Employment Status Strongly Agree 95% Confidence Interval</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
 <img src="images/employmentci.png" alt="Bar Chart of Questions vs Employment Status" width="556" />
 <p class="caption">
-Figure 32: Bar Chart of Questions vs Employment Status
+Figure 27: Bar Chart of Questions vs Employment Status
 </p>
 </div>
 </div>
@@ -1872,10 +1840,10 @@ Figure 32: Bar Chart of Questions vs Employment Status
 <li>Drag <strong>Country</strong> to <em>Filters</em></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-33"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
 <img src="images/cisteps.png" alt="Questions Format Using Table Calculations" width="406" />
 <p class="caption">
-Figure 33: Questions Format Using Table Calculations
+Figure 28: Questions Format Using Table Calculations
 </p>
 </div>
 </div>
@@ -1887,10 +1855,10 @@ Figure 33: Questions Format Using Table Calculations
 <li>Under the <em>Measure Values</em> in the <em>Marks</em> tab, drag <strong>Measure Names</strong> to <em>Path</em></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-34"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
 <img src="images/step15.png" alt="Add Country Filter" width="404" />
 <p class="caption">
-Figure 34: Add Country Filter
+Figure 29: Add Country Filter
 </p>
 </div>
 </div>
@@ -1898,69 +1866,69 @@ Figure 34: Add Country Filter
 <li>Right click <strong>Country</strong> and click <em>Show Filter</em></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-35"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-30"></span>
 <img src="images/step16.png" alt="Select Multiple Values (List)" width="396" />
 <p class="caption">
-Figure 35: Select Multiple Values (List)
+Figure 30: Select Multiple Values (List)
 </p>
 </div>
 </div>
 <p>Right click the country filter and change the type to <em>Multiple Values(list)</em></p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-36"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-31"></span>
 <img src="images/step17.png" alt="Show Parameter in Legend" width="400" />
 <p class="caption">
-Figure 36: Show Parameter in Legend
+Figure 31: Show Parameter in Legend
 </p>
 </div>
 </div>
 <p>Right click <strong>Questions</strong> and click <em>Show Parameter</em></p>
 <h2 id="creating-gender-strongly-agree-95-confidence-interval">Creating Gender Strongly Agree 95% Confidence Interval</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-37"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
 <img src="images/genderci.png" alt="Confidence Interval of Questions vs Gender" width="554" />
 <p class="caption">
-Figure 37: Confidence Interval of Questions vs Gender
+Figure 32: Confidence Interval of Questions vs Gender
 </p>
 </div>
 </div>
 <p>Repeat the same steps as <strong>Employment Confidence Interval</strong> for <strong>Gender Confidence Interval</strong></p>
 <h2 id="creating-household-size-strongly-agree-95-confidence-interval">Creating Household Size Strongly Agree 95% Confidence Interval</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-38"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-33"></span>
 <img src="images/householdsizeci.png" alt="Confidence Interval of Household Size" width="556" />
 <p class="caption">
-Figure 38: Confidence Interval of Household Size
+Figure 33: Confidence Interval of Household Size
 </p>
 </div>
 </div>
 <p>Repeat the same steps as <strong>Employment Confidence Interval</strong> for <strong>Household Size Confidence Interval</strong></p>
 <h2 id="creating-household-children-strongly-agree-95-confidence-interval">Creating Household children Strongly Agree 95% Confidence Interval</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-39"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-34"></span>
 <img src="images/householdchildrenci.png" alt="Confidence Interval of Household Children" width="554" />
 <p class="caption">
-Figure 39: Confidence Interval of Household Children
+Figure 34: Confidence Interval of Household Children
 </p>
 </div>
 </div>
 <p>Repeat the same steps as <strong>Employment Confidence Interval</strong> for <strong>Household Children Confidence Interval</strong></p>
 <h2 id="creating-age-strongly-agree-95-confidence-interval">Creating Age Strongly Agree 95% Confidence Interval</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-40"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-35"></span>
 <img src="images/agegroupci.png" alt="Confidence Interval of Age Group" width="556" />
 <p class="caption">
-Figure 40: Confidence Interval of Age Group
+Figure 35: Confidence Interval of Age Group
 </p>
 </div>
 </div>
 <p>Repeat the same steps as <strong>Employment Confidence Interval</strong> for <strong>Age Group Confidence Interval</strong></p>
 <h2 id="creating-dashboard">Creating Dashboard</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-41"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-36"></span>
 <img src="images/tableau3.png" alt="Add all Sheets to Dashboard" width="636" />
 <p class="caption">
-Figure 41: Add all Sheets to Dashboard
+Figure 36: Add all Sheets to Dashboard
 </p>
 </div>
 </div>
@@ -1969,16 +1937,25 @@ Figure 41: Add all Sheets to Dashboard
 <li>Drag all the following sheets to the spaces in the Dashboard</li>
 </ul>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-42"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-37"></span>
 <img src="images/dashboard2.png" alt="Add Questions Bar to Dashboard" width="518" />
 <p class="caption">
-Figure 42: Add Questions Bar to Dashboard
+Figure 37: Add Questions Bar to Dashboard
 </p>
 </div>
 </div>
 <p>Click on the dropdown bar of the scatterplot to add <em>Parameters, Questions</em> Drag the <strong>Questions</strong> bar to the top of the dashboard. With that, we are done with the Tableau!</p>
 <hr />
 <h1 id="major-observations">Major Observations</h1>
+<p><strong><em>1. I am worried about the potential side effects of a Covid19 vaccine</em></strong></p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-38"></span>
+<img src="images/Observation1.png" alt="Add Questions Bar to Dashboard" width="520" />
+<p class="caption">
+Figure 38: Add Questions Bar to Dashboard
+</p>
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
