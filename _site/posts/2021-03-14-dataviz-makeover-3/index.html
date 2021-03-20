@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/bar.png","images/bar2.png","images/dataset.png","images/dataset2.png","images/dataset3.png","images/desktop.ini","images/linegraph.png","images/map.png","images/maptooltip.png","images/maptooltip2.png","images/original.png","images/parameter.png","images/pie.png","images/pietooltip.png","images/sketch.png","images/tableau2.png"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/bar.png","images/bar2.png","images/dashboard.png","images/dataset.png","images/dataset2.png","images/dataset3.png","images/desktop.ini","images/linegraph.png","images/map.png","images/maptooltip.png","images/maptooltip2.png","images/original.png","images/parameter.png","images/pie.png","images/pietooltip.png","images/sketch.png","images/tableau2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2062,7 +2062,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#preparing-the-dataset">Preparing the Dataset</a></li>
 <li><a href="#map-dashboard">Map Dashboard</a></li>
 <li><a href="#line-graph---occurrances-and-fatalities-over-the-years-dashboard">Line Graph - Occurrances and Fatalities over the Years Dashboard</a></li>
+<li><a href="#bar-graph---involved-parties-dashboard">Bar Graph - Involved Parties Dashboard</a></li>
+<li><a href="#pie-chart-dashboard">Pie Chart Dashboard</a></li>
+<li><a href="#compiling-the-dashboard">Compiling the Dashboard</a></li>
 </ul></li>
+<li><a href="#five-major-observations-from-the-visualisation">Five Major Observations from the Visualisation</a></li>
 </ul>
 </nav>
 </div>
@@ -2203,7 +2207,7 @@ Figure 3: Proposed Tableau Design
 </p>
 </div>
 </div>
-<p>An interactive experience can be found at this link: xxxxx</p>
+<p>An interactive experience can be found at this link: <a href="https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashboard1?publish=yes" class="uri">https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashboard1?publish=yes</a></p>
 <hr />
 <h1 id="step-by-step-guide-to-prepare-the-tableau-visualisation"><strong>Step by Step Guide to Prepare the Tableau Visualisation</strong></h1>
 <h2 id="preparing-the-dataset">Preparing the Dataset</h2>
@@ -2311,6 +2315,7 @@ Figure 11: Line Graph
 <li>Add Measure Names to Colours and update the colours accordingly</li>
 <li>Name the Sheet “Fatalities over the years”</li>
 </ol>
+<h2 id="bar-graph---involved-parties-dashboard">Bar Graph - Involved Parties Dashboard</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
 <img src="images/bar.png" alt="Bar Graph - Number of Occurrences" width="273" />
@@ -2341,6 +2346,7 @@ Figure 13: Bar Graph - Fatality Rate
 <li>Add Actor 1, Country, Year and Event Type to <strong>Filters</strong></li>
 <li>Rename Sheet to “Inv Parties Fatalities”</li>
 </ol>
+<h2 id="pie-chart-dashboard">Pie Chart Dashboard</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
 <img src="images/pie.png" alt="Pie Chart" width="273" />
@@ -2356,15 +2362,66 @@ Figure 14: Pie Chart
 <li>Add Occurrences/Fatalities to <strong>Angle</strong></li>
 <li>Add Year, Country to <strong>Tooltip</strong></li>
 <li>Add Occurrences/Fatalities, and Event Type to <strong>Label</strong></li>
+<li>Rename Sheet as “Pie Chart”</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
-<img src="images/pietooltip.png" alt="Pie Chart - Tooltip" width="369" />
+<img src="images/pietooltip.png" alt="Pie Chart - Tooltip" width="276" />
 <p class="caption">
 Figure 15: Pie Chart - Tooltip
 </p>
 </div>
 </div>
+<ol type="1">
+<li>Add Sub Event to <strong>Columns</strong></li>
+<li>Add Occurrances/Fatalities to <strong>Rows</strong></li>
+<li>Add Year, Country and Event Type to <strong>Filters</strong></li>
+<li>Rename Sheet as “Sub Event”</li>
+<li>Return to Sheet “Pie Chart” and add <strong>Tooltips</strong> according to the formula in the Figure</li>
+</ol>
+<h2 id="compiling-the-dashboard">Compiling the Dashboard</h2>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
+<img src="images/dashboard.png" alt="Compiling the Dashboard" width="289" />
+<p class="caption">
+Figure 16: Compiling the Dashboard
+</p>
+</div>
+</div>
+<ol type="1">
+<li>Compile the different sheets into the dashboard as above</li>
+<li>Ensure that the Country Filter are linked to all the sheets, through “Apply to Worksheets”</li>
+<li>Ensure that the Year is linked too all sheets except “Fatalities over the Years”</li>
+<li>Ensure that Parameter Occurrences/Fatalities is linekd to all sheets.</li>
+</ol>
+<p>The Visualisation is finally done, and final product can be viewed through Tableau Public <a href="https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashboard1?publish=yes" class="uri">https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashboard1?publish=yes</a></p>
+<h1 id="five-major-observations-from-the-visualisation">Five Major Observations from the Visualisation</h1>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>No.</th>
+<th>Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Since 2010, the number of protest occurrences have risen over time across ASEAN. This is especially true for Indonesia and Thailand. However, the number of fatalities have generally remained low relative to the rise in protests.</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>Across ASEAN, the number of occurrences and fatalities from violence against civilians are concentrated in three key clusters. First, in Myanmar, and especially in the Rakhine and Shan regions. Second, in the Philippines, and involving the Police Forces of the Philippines and Anti-Drug Vigilantes. Lastly, in the Southern Thai provinces of Yala, Narathiwat, and Pattani, involving the Malay Muslim Separatists in Thailand.</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>The number of battles have also risen over time. These battles generally occur in the same regions where we see violence against civilians, namely the Northern Myanmar provinces of Shan and Kachin, Mindanao in Southern Philippines, Southern Thailand provinces of Yala, Narathiwat and Pattani, and also Papua in Indonesia.</td>
+</tr>
+</tbody>
+</table>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

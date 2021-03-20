@@ -72,7 +72,7 @@ knitr::include_graphics("images/tableau2.png")
 ```
 
 An interactive experience can be found at this link:
-xxxxx
+https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashboard1?publish=yes
 
 
 
@@ -164,6 +164,7 @@ knitr::include_graphics("images/linegraph.png")
 10. Add Measure Names to Colours and update the colours accordingly 
 11. Name the Sheet "Fatalities over the years"
 
+## Bar Graph - Involved Parties Dashboard
 
 ```{r, echo=FALSE, fig.cap="Bar Graph - Number of Occurrences", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/bar.png")
@@ -185,6 +186,8 @@ knitr::include_graphics("images/bar2.png")
 4. Add Actor 1, Country, Year and Event Type to **Filters**
 5. Rename Sheet to "Inv Parties Fatalities"
 
+## Pie Chart Dashboard
+
 ```{r, echo=FALSE, fig.cap="Pie Chart", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/pie.png")
 ```
@@ -195,8 +198,37 @@ knitr::include_graphics("images/pie.png")
 4. Add Occurrences/Fatalities to **Angle**
 5. Add Year, Country to **Tooltip**
 6. Add Occurrences/Fatalities, and Event Type to **Label**
+7. Rename Sheet as "Pie Chart"
 
 ```{r, echo=FALSE, fig.cap="Pie Chart - Tooltip", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/pietooltip.png")
 ```
+
+1. Add Sub Event to **Columns**
+2. Add Occurrances/Fatalities to **Rows**
+3. Add Year, Country and Event Type to **Filters**
+4. Rename Sheet as "Sub Event"
+4. Return to Sheet "Pie Chart" and add **Tooltips** according to the formula in the Figure
+
+## Compiling the Dashboard
+
+```{r, echo=FALSE, fig.cap="Compiling the Dashboard", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/dashboard.png")
+```
+
+1. Compile the different sheets into the dashboard as above
+2. Ensure that the Country Filter are linked to all the sheets, through "Apply to Worksheets"
+3. Ensure that the Year is linked too all sheets except "Fatalities over the Years"
+4. Ensure that Parameter Occurrences/Fatalities is linekd to all sheets.
+
+The Visualisation is finally done, and final product can be viewed through Tableau Public
+https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashboard1?publish=yes
+
+# Five Major Observations from the Visualisation
+
+|No. |Observations|
+|-|--------|
+|1.| Since 2010, the number of protest occurrences have risen over time across ASEAN. This is especially true for Indonesia and Thailand. However, the number of fatalities have generally remained low relative to the rise in protests. |
+|2.| Across ASEAN, the number of occurrences and fatalities from violence against civilians are concentrated in three key clusters. First, in Myanmar, and especially in the Rakhine and Shan regions. Second, in the Philippines, and involving the Police Forces of the Philippines and Anti-Drug Vigilantes. Lastly, in the Southern Thai provinces of Yala, Narathiwat, and Pattani, involving the Malay Muslim Separatists in Thailand.|
+|3.| The number of battles have also risen over time. These battles generally occur in the same regions where we see violence against civilians, namely the Northern Myanmar provinces of Shan and Kachin, Mindanao in Southern Philippines, Southern Thailand provinces of Yala, Narathiwat and Pattani, and also Papua in Indonesia.|
 
