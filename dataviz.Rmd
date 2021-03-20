@@ -2,6 +2,7 @@
 title: "Dataviz Makeover"
 listing:
   posts:
+    - 2021-03-14-dataviz-makeover-3
     - 2021-02-14-dataviz-makeover-2
     - 2021-01-23-dataviz-makeover-assignment-1
 
