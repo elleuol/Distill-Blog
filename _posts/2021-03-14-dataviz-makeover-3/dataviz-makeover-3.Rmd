@@ -1,7 +1,7 @@
 ---
 title: "Dataviz Makeover 3"
 description: |
-  A short description of the post.
+  Armed Conflict Analysis in South East Asia
 author:
   - name: Louelle Teo
     url: https://linkedin.com/in/louelleteo
