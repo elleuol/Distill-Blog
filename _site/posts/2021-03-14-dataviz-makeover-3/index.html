@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/dataset.png","images/dataset2.png","images/dataset3.png","images/desktop.ini","images/linegraph.png","images/map.png","images/maptooltip.png","images/maptooltip2.png","images/original.png","images/parameter.png","images/sketch.png","images/tableau2.png"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","desktop.ini","images/bar.png","images/bar2.png","images/dataset.png","images/dataset2.png","images/dataset3.png","images/desktop.ini","images/linegraph.png","images/map.png","images/maptooltip.png","images/maptooltip2.png","images/original.png","images/parameter.png","images/pie.png","images/pietooltip.png","images/sketch.png","images/tableau2.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2295,6 +2295,73 @@ Figure 10: Map Tooltips
 <img src="images/linegraph.png" alt="Line Graph" width="273" />
 <p class="caption">
 Figure 11: Line Graph
+</p>
+</div>
+</div>
+<ol type="1">
+<li>Add Year to <strong>Columns</strong></li>
+<li>Add Event Type to <strong>Rows</strong></li>
+<li>Change the Measure of Event Type in <strong>Rows</strong> to Count</li>
+<li>Add Fatalities to *Rows**</li>
+<li>Change the Measure of Fatalities in <strong>Rows</strong> to Sum</li>
+<li>Right Click Fatalities and choose Dual Axis</li>
+<li>Right click on the Second Axis on the Chart, and click <strong>Synchronize Axis</strong></li>
+<li>Add Event Type Category again to <strong>Rows</strong></li>
+<li>Add Country and Event Type to Filter</li>
+<li>Add Measure Names to Colours and update the colours accordingly</li>
+<li>Name the Sheet “Fatalities over the years”</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
+<img src="images/bar.png" alt="Bar Graph - Number of Occurrences" width="273" />
+<p class="caption">
+Figure 12: Bar Graph - Number of Occurrences
+</p>
+</div>
+</div>
+<ol type="1">
+<li>Add Event Type to <strong>Columns</strong></li>
+<li>Update the Measure of Event Type to <strong>Count</strong></li>
+<li>Add Actor 1 to <strong>Rows</strong></li>
+<li>Add Actor 1, Country, Year and Event Type to <strong>Filters</strong></li>
+<li>Rename Sheet to “Inv Parties Occurrences”</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<img src="images/bar2.png" alt="Bar Graph - Fatality Rate" width="273" />
+<p class="caption">
+Figure 13: Bar Graph - Fatality Rate
+</p>
+</div>
+</div>
+<ol type="1">
+<li>Add Event Type to <strong>Columns</strong></li>
+<li>Update the Measure of Event Type to <strong>Sum</strong></li>
+<li>Add Actor 1 to <strong>Rows</strong></li>
+<li>Add Actor 1, Country, Year and Event Type to <strong>Filters</strong></li>
+<li>Rename Sheet to “Inv Parties Fatalities”</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
+<img src="images/pie.png" alt="Pie Chart" width="273" />
+<p class="caption">
+Figure 14: Pie Chart
+</p>
+</div>
+</div>
+<ol type="1">
+<li>Add Country, Year, Event Type to <strong>Filters</strong></li>
+<li>Under Marks, Choose <strong>Pie</strong></li>
+<li>Add Event Type to <strong>Colours</strong></li>
+<li>Add Occurrences/Fatalities to <strong>Angle</strong></li>
+<li>Add Year, Country to <strong>Tooltip</strong></li>
+<li>Add Occurrences/Fatalities, and Event Type to <strong>Label</strong></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<img src="images/pietooltip.png" alt="Pie Chart - Tooltip" width="369" />
+<p class="caption">
+Figure 15: Pie Chart - Tooltip
 </p>
 </div>
 </div>
