@@ -2107,7 +2107,7 @@ Figure 1: South-east Asia Armed Conflict Analysis
 </tr>
 <tr class="even">
 <td>4.</td>
-<td>Armed Conflict Event by Type does not indicate if it is only for Myammar, or for all countries</td>
+<td>Armed Conflict Event by Type does not indicate if it is only for Myanmar, or for all countries</td>
 </tr>
 <tr class="odd">
 <td>5.</td>
@@ -2238,7 +2238,7 @@ Figure 6: Update the column Properties
 </p>
 </div>
 </div>
-<p>Update the correct properties for each column. </br> 1. <em>Year</em> properties should be updated to date format. </br> 2. Ensure Longitude and Latitude have geolocation properties. </br> 3. Categorical data have string properties </br> 4. Numerical data have number properties.</p>
+<p>Update the correct properties for each column. </br> 1. <em>Year</em> properties should be updated to date format. </br> 2. Ensure <em>Longitude</em> and <em>Latitude</em> have geolocation properties. </br> 3. Categorical data have string properties </br> 4. Numerical data have number properties.</p>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
 <img src="images/parameter.png" alt="Create Parameter" width="197" />
@@ -2247,10 +2247,10 @@ Figure 7: Create Parameter
 </p>
 </div>
 </div>
-<p>Create a Parameter <strong>Occurrences/Fatalities</strong> to create a dropdown choice for users to toggle. </br> Create a measured value with the following code, so that tableau is able to pick up the correct formulas when users toggle. </br></p>
+<p>Create a Parameter <em>Occurrences/Fatalities</em> to create a dropdown choice for users to toggle. </br> Create a measured value with the following code, so that tableau is able to pick up the correct formulas when users toggle. </br></p>
 <ul>
-<li>Occurrences will have the formula Count([Event Type]). This will give us visibility of the count of events that occurs in a region. </br></li>
-<li>Fatalities will have the fomula SUM([Fatalities]). This will give us a sum of the number of victims in armed conflicts in a region. </br></li>
+<li><em>Occurrences</em> will have the formula Count([Event Type]). This will give us visibility of the count of events that occurs in a region. </br></li>
+<li><em>Fatalities</em> will have the fomula SUM([Fatalities]). This will give us a sum of the number of victims in armed conflicts in a region. </br></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
@@ -2261,10 +2261,10 @@ Figure 8: Building the Map
 </div>
 </div>
 <ol type="1">
-<li>Add Longitude and Latitude to the <strong>Columns</strong> and <strong>Rows</strong> as seen in <em>Figure 1</em></li>
-<li>Add Country, Year and Event Type to <em>Figure 2</em></li>
-<li>Add Event Type to <strong>Colours</strong>, Measured Values Occurrances/Fatalities to <strong>Size</strong>, Admin 1, Year, Country, Occurrances/Fatalities, Event Type, Event Id Cnty, and Fatalities to <strong>Labels</strong> as seen in <em>Figure 3</em>.</li>
-<li>Choose to <strong>show filter</strong> for Year, and Country, and choose the <strong>Single Value Slider</strong> for Year, and <strong>Multiple Values (list)</strong> for Country as shown in <em>Figure 4</em></li>
+<li>Add <em>Longitude</em> and <em>Latitude</em> to the <strong>Columns</strong> and <strong>Rows</strong> as seen in <em>Figure 1</em></li>
+<li>Add <em>Country</em>, <em>Year</em> and <em>Event</em> Type to <em>Figure 2</em></li>
+<li>Add <em>Event Type</em> to <strong>Colours</strong>, Measured Values <em>Occurrances/Fatalities</em> to <strong>Size</strong>, <em>Admin 1</em>, <em>Year</em>, <em>Country</em>, <em>Occurrances/Fatalities</em>, <em>Event Type</em>, <em>Event Id Cnty</em>, and <em>Fatalities</em> to <strong>Labels</strong> as seen in <em>Figure 3</em>.</li>
+<li>Choose to <strong>show filter</strong> for <em>Year</em>, and <em>Country</em>, and choose the <strong>Single Value Slider</strong> for <em>Year</em>, and <strong>Multiple Values (list)</strong> for <em>Country</em> as shown in <em>Figure 4</em></li>
 <li>Name this Sheet as “Map”</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body-outset">
@@ -2277,10 +2277,10 @@ Figure 9: Map Tooltips
 </div>
 <p>Next, we will create this histogram graph for a tooltip in maps. It will indicate the Number of Occurrences and Fatalities of a region, based on Event Type.</p>
 <ol type="1">
-<li>Add Event Type into <strong>Columns</strong></li>
-<li>Add Measured Values into <strong>Rows</strong></li>
-<li>Choose count(Event Type) and Sum(Fatalities) as the <strong>Measured Values</strong></li>
-<li>Add Country, Event Type and Year to <strong>Filter</strong></li>
+<li>Add <em>Event Type</em> into <strong>Columns</strong></li>
+<li>Add <em>Measured Values</em> into <strong>Rows</strong></li>
+<li>Choose <em>count(Event Type)</em> and <em>Sum(Fatalities)</em> as the <strong>Measured Values</strong></li>
+<li>Add <em>Country</em>, <em>Event Type</em> and <strong>Year* to </strong>Filter**</li>
 <li>Rename Aliases of Measure Names to Occurrances and Fatalities.</li>
 <li>Name this Sheet “Event”</li>
 </ol>
@@ -2292,7 +2292,7 @@ Figure 10: Map Tooltips
 </p>
 </div>
 </div>
-<p>Finally, go back to the Map Sheet. Edit the Tooltip with the following code. this is so when the user hovers over a point in the map, the Event Tooltip will appear with the following details.</p>
+<p>Finally, go back to the Map Sheet. Edit the <strong>Tooltip</strong> with the following code. this is so when the user hovers over a point in the map, the Event Tooltip will appear with the following details.</p>
 <h2 id="line-graph---occurrances-and-fatalities-over-the-years-dashboard">Line Graph - Occurrances and Fatalities over the Years Dashboard</h2>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
@@ -2303,16 +2303,16 @@ Figure 11: Line Graph
 </div>
 </div>
 <ol type="1">
-<li>Add Year to <strong>Columns</strong></li>
-<li>Add Event Type to <strong>Rows</strong></li>
-<li>Change the Measure of Event Type in <strong>Rows</strong> to Count</li>
-<li>Add Fatalities to *Rows**</li>
-<li>Change the Measure of Fatalities in <strong>Rows</strong> to Sum</li>
-<li>Right Click Fatalities and choose Dual Axis</li>
+<li>Add <em>Year</em> to <strong>Columns</strong></li>
+<li>Add <em>Event</em> Type to <strong>Rows</strong></li>
+<li>Change the Measure of <em>Event Type</em> in <strong>Rows</strong> to Count</li>
+<li>Add <em>Fatalities</em> to *Rows**</li>
+<li>Change the Measure of <em>Fatalities</em> in <strong>Rows</strong> to Sum</li>
+<li>Right Click <em>Fatalities</em> and choose <strong>Dual Axis</strong></li>
 <li>Right click on the Second Axis on the Chart, and click <strong>Synchronize Axis</strong></li>
-<li>Add Event Type Category again to <strong>Rows</strong></li>
-<li>Add Country and Event Type to Filter</li>
-<li>Add Measure Names to Colours and update the colours accordingly</li>
+<li>Add <em>Event Type</em> Category again to <strong>Rows</strong></li>
+<li>Add <em>Country</em> and <em>Event Type</em> to <strong>Filter</strong></li>
+<li>Add <em>Measure Names</em> to <strong>Colours</strong> and update the colours accordingly</li>
 <li>Name the Sheet “Fatalities over the years”</li>
 </ol>
 <h2 id="bar-graph---involved-parties-dashboard">Bar Graph - Involved Parties Dashboard</h2>
@@ -2325,10 +2325,10 @@ Figure 12: Bar Graph - Number of Occurrences
 </div>
 </div>
 <ol type="1">
-<li>Add Event Type to <strong>Columns</strong></li>
-<li>Update the Measure of Event Type to <strong>Count</strong></li>
-<li>Add Actor 1 to <strong>Rows</strong></li>
-<li>Add Actor 1, Country, Year and Event Type to <strong>Filters</strong></li>
+<li>Add <em>Event Type</em> to <strong>Columns</strong></li>
+<li>Update the Measure of <em>Event Type</em> to <strong>Count</strong></li>
+<li>Add <em>Actor 1</em> to <strong>Rows</strong></li>
+<li>Add <em>Actor 1</em>, <em>Country</em>, <em>Year</em> and <em>Event Type</em> to <strong>Filters</strong></li>
 <li>Rename Sheet to “Inv Parties Occurrences”</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body-outset">
@@ -2340,10 +2340,10 @@ Figure 13: Bar Graph - Fatality Rate
 </div>
 </div>
 <ol type="1">
-<li>Add Event Type to <strong>Columns</strong></li>
-<li>Update the Measure of Event Type to <strong>Sum</strong></li>
-<li>Add Actor 1 to <strong>Rows</strong></li>
-<li>Add Actor 1, Country, Year and Event Type to <strong>Filters</strong></li>
+<li>Add <em>Event Type</em> to <strong>Columns</strong></li>
+<li>Update the Measure of <em>Event Type</em> to <strong>Sum</strong></li>
+<li>Add <em>Actor 1</em> to <strong>Rows</strong></li>
+<li>Add <em>Actor 1</em>, <em>Country</em>, <em>Year</em> and <em>Event Type</em> to <strong>Filters</strong></li>
 <li>Rename Sheet to “Inv Parties Fatalities”</li>
 </ol>
 <h2 id="pie-chart-dashboard">Pie Chart Dashboard</h2>
@@ -2356,12 +2356,12 @@ Figure 14: Pie Chart
 </div>
 </div>
 <ol type="1">
-<li>Add Country, Year, Event Type to <strong>Filters</strong></li>
-<li>Under Marks, Choose <strong>Pie</strong></li>
-<li>Add Event Type to <strong>Colours</strong></li>
-<li>Add Occurrences/Fatalities to <strong>Angle</strong></li>
-<li>Add Year, Country to <strong>Tooltip</strong></li>
-<li>Add Occurrences/Fatalities, and Event Type to <strong>Label</strong></li>
+<li>Add <em>Country, Year, Event Type</em> to <strong>Filters</strong></li>
+<li>Under <strong>Marks</strong>, Choose <strong>Pie</strong></li>
+<li>Add <em>Event Type</em> to <strong>Colours</strong></li>
+<li>Add <em>Occurrences/Fatalities</em> to <strong>Angle</strong></li>
+<li>Add <em>Year, Country</em> to <strong>Tooltip</strong></li>
+<li>Add <em>Occurrences/Fatalities</em>, and <em>Event Type</em> to <strong>Label</strong></li>
 <li>Rename Sheet as “Pie Chart”</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body-outset">
@@ -2373,9 +2373,9 @@ Figure 15: Pie Chart - Tooltip
 </div>
 </div>
 <ol type="1">
-<li>Add Sub Event to <strong>Columns</strong></li>
-<li>Add Occurrances/Fatalities to <strong>Rows</strong></li>
-<li>Add Year, Country and Event Type to <strong>Filters</strong></li>
+<li>Add <em>Sub Event</em> to <strong>Columns</strong></li>
+<li>Add <em>Occurrances/Fatalities</em> to <strong>Rows</strong></li>
+<li>Add <em>Year, Country</em> and <em>Event Type</em> to <strong>Filters</strong></li>
 <li>Rename Sheet as “Sub Event”</li>
 <li>Return to Sheet “Pie Chart” and add <strong>Tooltips</strong> according to the formula in the Figure</li>
 </ol>
@@ -2419,6 +2419,14 @@ Figure 16: Compiling the Dashboard
 <tr class="odd">
 <td>3.</td>
 <td>The number of battles have also risen over time. These battles generally occur in the same regions where we see violence against civilians, namely the Northern Myanmar provinces of Shan and Kachin, Mindanao in Southern Philippines, Southern Thailand provinces of Yala, Narathiwat and Pattani, and also Papua in Indonesia.</td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td>Myanmar is the only country in ASEAN where the fatality rate (fatalities / number of occurrences) has risen over time. This is excluding Laos where the sample size of occurrences is quite limited.</td>
+</tr>
+<tr class="odd">
+<td>5.</td>
+<td>In Indonesia, the fatalities are disproportionately concentrated in Papua and to a smaller extent, East Java. Meanwhile, the bulk of the protests occur in the metropolitan areas such as Jakarta.</td>
 </tr>
 </tbody>
 </table>

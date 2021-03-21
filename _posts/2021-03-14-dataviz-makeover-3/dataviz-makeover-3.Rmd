@@ -32,7 +32,7 @@ knitr::include_graphics("images/original.png")
 |1.| The map shows a good scatter of the different event types. However, it does not tell us if the event has happened once, or a few times in the area. Therefore we are unable to gauge how intense the armed conflict location is.|
 |2.| The map shows a scatter of the event types from 2015 to 2020. However, it does not give us an option to toggle the different year events, which may give us a better visualisation of the growing conflict in certain areas.|
 |3.| The line graph axis title states "Count of Sheet1". This does not tell us if this is the count of event occurrences or something else. It is not clear what it is trying to indicate.|
-|4.| Armed Conflict Event by Type does not indicate if it is only for Myammar, or for all countries|
+|4.| Armed Conflict Event by Type does not indicate if it is only for Myanmar, or for all countries|
 |5.| When you hover over the map, the tooltip that appears does not give good information about the data point. It does not indicate the town, but only gives us the geolocation. Next, it gives us the event ID, which does not indicate where the ID is from, or where we can reference it to|
 
 
@@ -102,7 +102,7 @@ knitr::include_graphics("images/dataset3.png")
 
 Update the correct properties for each column. </br>
 1. *Year* properties should be updated to date format. </br>
-2. Ensure Longitude and Latitude have geolocation properties. </br>
+2. Ensure *Longitude* and *Latitude* have geolocation properties. </br>
 3. Categorical data have string properties </br>
 4. Numerical data have number properties.
 
@@ -110,20 +110,20 @@ Update the correct properties for each column. </br>
 knitr::include_graphics("images/parameter.png")
 ```
 
-Create a Parameter **Occurrences/Fatalities** to create a dropdown choice for users to toggle. </br>
+Create a Parameter *Occurrences/Fatalities* to create a dropdown choice for users to toggle. </br>
 Create a measured value with the following code, so that tableau is able to pick up the correct formulas when users toggle. </br>
 
-- Occurrences will have the formula Count([Event Type]). This will give us visibility of the count of events that occurs in a region. </br>
-- Fatalities will have the fomula SUM([Fatalities]). This will give us a sum of the number of victims in armed conflicts in a region. </br>
+- *Occurrences* will have the formula Count([Event Type]). This will give us visibility of the count of events that occurs in a region. </br>
+- *Fatalities* will have the fomula SUM([Fatalities]). This will give us a sum of the number of victims in armed conflicts in a region. </br>
 
 ```{r, echo=FALSE, fig.cap="Building the Map", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/map.png")
 ```
 
-1. Add Longitude and Latitude to the **Columns** and **Rows** as seen in *Figure 1*
-2. Add Country, Year and Event Type to *Figure 2*
-3. Add Event Type to **Colours**, Measured Values Occurrances/Fatalities to **Size**, Admin 1, Year, Country, Occurrances/Fatalities, Event Type, Event Id Cnty, and  Fatalities to **Labels** as seen in *Figure 3*.
-4. Choose to **show filter** for Year, and Country, and choose the **Single Value Slider** for Year, and **Multiple Values (list)** for Country as shown in *Figure 4*
+1. Add *Longitude* and *Latitude* to the **Columns** and **Rows** as seen in *Figure 1*
+2. Add *Country*, *Year* and *Event* Type to *Figure 2*
+3. Add *Event Type* to **Colours**, Measured Values *Occurrances/Fatalities* to **Size**, *Admin 1*, *Year*, *Country*, *Occurrances/Fatalities*, *Event Type*, *Event Id Cnty*, and  *Fatalities* to **Labels** as seen in *Figure 3*.
+4. Choose to **show filter** for *Year*, and *Country*, and choose the **Single Value Slider** for *Year*, and **Multiple Values (list)** for *Country* as shown in *Figure 4*
 5. Name this Sheet as "Map"
 
 
@@ -133,10 +133,10 @@ knitr::include_graphics("images/maptooltip2.png")
 
 Next, we will create this histogram graph for a tooltip in maps. It will indicate the Number of Occurrences and Fatalities of a region, based on Event Type.
 
-1. Add Event Type into **Columns**
-2. Add Measured Values into **Rows**
-3. Choose count(Event Type) and Sum(Fatalities) as the **Measured Values**
-4. Add Country, Event Type and Year to **Filter**
+1. Add *Event Type* into **Columns**
+2. Add *Measured Values* into **Rows**
+3. Choose *count(Event Type)* and *Sum(Fatalities)* as the **Measured Values**
+4. Add *Country*, *Event Type* and **Year* to **Filter**
 5. Rename Aliases of Measure Names to Occurrances and Fatalities.
 6. Name this Sheet "Event"
 
@@ -144,7 +144,7 @@ Next, we will create this histogram graph for a tooltip in maps. It will indicat
 knitr::include_graphics("images/maptooltip.png")
 ```
 
-Finally, go back to the Map Sheet. Edit the Tooltip with the following code. this is so when the user hovers over a point in the map, the Event Tooltip will appear with the following details.
+Finally, go back to the Map Sheet. Edit the **Tooltip** with the following code. this is so when the user hovers over a point in the map, the Event Tooltip will appear with the following details.
 
 ## Line Graph - Occurrances and Fatalities over the Years Dashboard
 
@@ -152,16 +152,16 @@ Finally, go back to the Map Sheet. Edit the Tooltip with the following code. thi
 knitr::include_graphics("images/linegraph.png")
 ```
 
-1. Add Year to **Columns**
-2. Add Event Type to **Rows**
-3. Change the Measure of Event Type in **Rows** to Count
-4. Add Fatalities to *Rows**
-5. Change the Measure of Fatalities in **Rows** to Sum
-6. Right Click Fatalities and choose Dual Axis
+1. Add *Year* to **Columns**
+2. Add *Event* Type to **Rows**
+3. Change the Measure of *Event Type* in **Rows** to Count
+4. Add *Fatalities* to *Rows**
+5. Change the Measure of *Fatalities* in **Rows** to Sum
+6. Right Click *Fatalities* and choose **Dual Axis**
 7. Right click on the Second Axis on the Chart, and click **Synchronize Axis**
-8. Add Event Type Category again to **Rows**
-9. Add Country and Event Type to Filter
-10. Add Measure Names to Colours and update the colours accordingly 
+8. Add *Event Type* Category again to **Rows**
+9. Add *Country* and *Event Type* to **Filter**
+10. Add *Measure Names* to **Colours** and update the colours accordingly 
 11. Name the Sheet "Fatalities over the years"
 
 ## Bar Graph - Involved Parties Dashboard
@@ -170,20 +170,20 @@ knitr::include_graphics("images/linegraph.png")
 knitr::include_graphics("images/bar.png")
 ```
 
-1. Add Event Type to **Columns**
-2. Update the Measure of Event Type to **Count**
-3. Add Actor 1 to **Rows**
-4. Add Actor 1, Country, Year and Event Type to **Filters**
+1. Add *Event Type* to **Columns**
+2. Update the Measure of *Event Type* to **Count**
+3. Add *Actor 1* to **Rows**
+4. Add *Actor 1*, *Country*, *Year* and *Event Type* to **Filters**
 5. Rename Sheet to "Inv Parties Occurrences" 
 
 ```{r, echo=FALSE, fig.cap="Bar Graph - Fatality Rate", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/bar2.png")
 ```
 
-1. Add Event Type to **Columns**
-2. Update the Measure of Event Type to **Sum**
-3. Add Actor 1 to **Rows**
-4. Add Actor 1, Country, Year and Event Type to **Filters**
+1. Add *Event Type* to **Columns**
+2. Update the Measure of *Event Type* to **Sum**
+3. Add *Actor 1* to **Rows**
+4. Add *Actor 1*, *Country*, *Year* and *Event Type* to **Filters**
 5. Rename Sheet to "Inv Parties Fatalities"
 
 ## Pie Chart Dashboard
@@ -192,21 +192,21 @@ knitr::include_graphics("images/bar2.png")
 knitr::include_graphics("images/pie.png")
 ```
 
-1. Add Country, Year, Event Type to **Filters**
-2. Under Marks, Choose **Pie**
-3. Add Event Type to **Colours**
-4. Add Occurrences/Fatalities to **Angle**
-5. Add Year, Country to **Tooltip**
-6. Add Occurrences/Fatalities, and Event Type to **Label**
+1. Add *Country, Year, Event Type* to **Filters**
+2. Under **Marks**, Choose **Pie**
+3. Add *Event Type* to **Colours**
+4. Add *Occurrences/Fatalities* to **Angle**
+5. Add *Year, Country* to **Tooltip**
+6. Add *Occurrences/Fatalities*, and *Event Type* to **Label**
 7. Rename Sheet as "Pie Chart"
 
 ```{r, echo=FALSE, fig.cap="Pie Chart - Tooltip", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/pietooltip.png")
 ```
 
-1. Add Sub Event to **Columns**
-2. Add Occurrances/Fatalities to **Rows**
-3. Add Year, Country and Event Type to **Filters**
+1. Add *Sub Event* to **Columns**
+2. Add *Occurrances/Fatalities* to **Rows**
+3. Add *Year, Country* and *Event Type* to **Filters**
 4. Rename Sheet as "Sub Event"
 4. Return to Sheet "Pie Chart" and add **Tooltips** according to the formula in the Figure
 
@@ -231,4 +231,6 @@ https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashbo
 |1.| Since 2010, the number of protest occurrences have risen over time across ASEAN. This is especially true for Indonesia and Thailand. However, the number of fatalities have generally remained low relative to the rise in protests. |
 |2.| Across ASEAN, the number of occurrences and fatalities from violence against civilians are concentrated in three key clusters. First, in Myanmar, and especially in the Rakhine and Shan regions. Second, in the Philippines, and involving the Police Forces of the Philippines and Anti-Drug Vigilantes. Lastly, in the Southern Thai provinces of Yala, Narathiwat, and Pattani, involving the Malay Muslim Separatists in Thailand.|
 |3.| The number of battles have also risen over time. These battles generally occur in the same regions where we see violence against civilians, namely the Northern Myanmar provinces of Shan and Kachin, Mindanao in Southern Philippines, Southern Thailand provinces of Yala, Narathiwat and Pattani, and also Papua in Indonesia.|
+|4.|Myanmar is the only country in ASEAN where the fatality rate (fatalities / number of occurrences) has risen over time. This is excluding Laos where the sample size of occurrences is quite limited.|
+|5.|In Indonesia, the fatalities are disproportionately concentrated in Papua and to a smaller extent, East Java. Meanwhile, the bulk of the protests occur in the metropolitan areas such as Jakarta.|
 
