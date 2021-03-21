@@ -228,7 +228,7 @@ https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashbo
 # Five Major Observations from the Visualisation
 
 
-##1. Increase in peaceful Protests since 2010
+## 1. Increase in peaceful Protests since 2010
 
 ```{r, echo=FALSE, fig.cap="Protests Increases", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/mapobs3.png")
@@ -241,7 +241,7 @@ Since 2010, the number of protest occurrences have risen over time across ASEAN.
 
 Indonesia had a fair share of peaceful protest, with major themes around corruption, labour laws, jobs, and their economic outlook.
 
-##2. Myanmar, Philippines, Thailand have had the highest fatality rates in the last decade.
+## 2. Myanmar, Philippines, Thailand have had the highest fatality rates in the last decade.
 
 ```{r, echo=FALSE, fig.cap="Fatality Map", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/mapobs1.png")
@@ -259,7 +259,7 @@ Second, in the Philippines, and involving the Police Forces of the Philippines a
 
 Lastly, in the Southern Thai provinces of Yala, Narathiwat, and Pattani, involving the Malay Muslim Separatists in Thailand. These conflicts arose from early 1930s, where the concept of being a Thai, and also having Buddhist practices, conflicted with the Muslim Thais who observed Islamic Law.
 
-##3. Increase in the number of Battles and Violence against Civilians 
+## 3. Increase in the number of Battles and Violence against Civilians 
 
 ```{r, echo=FALSE, fig.cap="Increase in Battles and Violence", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/mapobs5.png")
@@ -269,7 +269,7 @@ The number of battles have also risen over time. These battles generally occur i
 
 The increase in military and police force against civilians are increasing, and it will continue to be a difficult battle in the years to come.
 
-##4. Myanmar continues to be in a difficult position
+## 4. Myanmar continues to be in a difficult position
 
 ```{r, echo=FALSE, fig.cap="Myanmar continues to be in a difficult position", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/mapobs6.png")
@@ -279,7 +279,7 @@ Myanmar is the only country in ASEAN where the fatality rate (fatalities / numbe
 
 Even as the news continue to escalate today, the greatest casualty and victims continue to be the citizens. Covid-19 has wrecked their economy, and unrest continues to deprive villages of essentials such as basic food and water.
 
-##5. Fake news is dangerous in spreading unrest
+## 5. Fake news is dangerous in spreading unrest
 
 ```{r, echo=FALSE, fig.cap="Indonesia Protests mainly in the City", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
 knitr::include_graphics("images/mapobs7.png")
