@@ -224,13 +224,70 @@ knitr::include_graphics("images/dashboard.png")
 The Visualisation is finally done, and final product can be viewed through Tableau Public
 https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashboard1?publish=yes
 
+-----
 # Five Major Observations from the Visualisation
 
-|No. |Observations|
-|-|--------|
-|1.| Since 2010, the number of protest occurrences have risen over time across ASEAN. This is especially true for Indonesia and Thailand. However, the number of fatalities have generally remained low relative to the rise in protests. |
-|2.| Across ASEAN, the number of occurrences and fatalities from violence against civilians are concentrated in three key clusters. First, in Myanmar, and especially in the Rakhine and Shan regions. Second, in the Philippines, and involving the Police Forces of the Philippines and Anti-Drug Vigilantes. Lastly, in the Southern Thai provinces of Yala, Narathiwat, and Pattani, involving the Malay Muslim Separatists in Thailand.|
-|3.| The number of battles have also risen over time. These battles generally occur in the same regions where we see violence against civilians, namely the Northern Myanmar provinces of Shan and Kachin, Mindanao in Southern Philippines, Southern Thailand provinces of Yala, Narathiwat and Pattani, and also Papua in Indonesia.|
-|4.|Myanmar is the only country in ASEAN where the fatality rate (fatalities / number of occurrences) has risen over time. This is excluding Laos where the sample size of occurrences is quite limited.|
-|5.|In Indonesia, the fatalities are disproportionately concentrated in Papua and to a smaller extent, East Java. Meanwhile, the bulk of the protests occur in the metropolitan areas such as Jakarta.|
 
+##1. Increase in peaceful Protests since 2010
+
+```{r, echo=FALSE, fig.cap="Protests Increases", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/mapobs3.png")
+```
+```{r, echo=FALSE, fig.cap="Protests Increases in Indonesia", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/mapobs4.png")
+```
+
+Since 2010, the number of protest occurrences have risen over time across ASEAN. This is especially true for Indonesia and Thailand. However, the number of fatalities have generally remained low relative to the rise in protests.
+
+Indonesia had a fair share of peaceful protest, with major themes around corruption, labour laws, jobs, and their economic outlook.
+
+##2. Myanmar, Philippines, Thailand have had the highest fatality rates in the last decade.
+
+```{r, echo=FALSE, fig.cap="Fatality Map", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/mapobs1.png")
+```
+```{r, echo=FALSE, fig.cap="Involved Parties", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/mapobs2.png")
+```
+
+Across ASEAN, the number of occurrences and fatalities from violence against civilians are concentrated in three key clusters. 
+
+First, in Myanmar, and especially in the Rakhine and Shan regions. This is due to major ethnic conflicts that spans 7 decades, leading to sporadic violence between government forces and the insurgent groups.
+
+
+Second, in the Philippines, and involving the Police Forces of the Philippines and Anti-Drug Vigilantes. The war on drugs started around 2016, and has by far the biggest fatality in ASEAN for the last decade. President Rodrigo Duterte had made a strong stance against drug criminals and drug addicts, allowing members of the public, and also police to kill known criminals and addicts without repurrcussions. This has lead to an outcry by many human rights groups, and also citizens, who could have been a victim to wrong accusations. The consequences of such a policy is still developing, and we can hope that no lasting long term detrimental effects are caused due to this strong stance.
+
+Lastly, in the Southern Thai provinces of Yala, Narathiwat, and Pattani, involving the Malay Muslim Separatists in Thailand. These conflicts arose from early 1930s, where the concept of being a Thai, and also having Buddhist practices, conflicted with the Muslim Thais who observed Islamic Law.
+
+##3. Increase in the number of Battles and Violence against Civilians 
+
+```{r, echo=FALSE, fig.cap="Increase in Battles and Violence", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/mapobs5.png")
+```
+
+The number of battles have also risen over time. These battles generally occur in the same regions where we see violence against civilians, namely the Northern Myanmar provinces of Shan and Kachin, Mindanao in Southern Philippines, Southern Thailand provinces of Yala, Narathiwat and Pattani, and also Papua in Indonesia.
+
+The increase in military and police force against civilians are increasing, and it will continue to be a difficult battle in the years to come.
+
+##4. Myanmar continues to be in a difficult position
+
+```{r, echo=FALSE, fig.cap="Myanmar continues to be in a difficult position", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/mapobs6.png")
+```
+
+Myanmar is the only country in ASEAN where the fatality rate (fatalities / number of occurrences) has risen over time. This is excluding Laos where the sample size of occurrences is quite limited.
+
+Even as the news continue to escalate today, the greatest casualty and victims continue to be the citizens. Covid-19 has wrecked their economy, and unrest continues to deprive villages of essentials such as basic food and water.
+
+##5. Fake news is dangerous in spreading unrest
+
+```{r, echo=FALSE, fig.cap="Indonesia Protests mainly in the City", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/mapobs7.png")
+```
+```{r, echo=FALSE, fig.cap="Indonesia fatalities mainly in the Papua", fig.align='center',layout="l-body-outset",dpi=300, fig.width=12, fig.height=6}
+knitr::include_graphics("images/mapobs8.png")
+```
+
+In Indonesia, the fatalities are disproportionately concentrated in Papua and to a smaller extent, East Java. Meanwhile, the bulk of the protests occur in the metropolitan areas such as Jakarta
+
+Most of the fatalities in Papua happened in a small number of occurrence, with the cause of the riots still vaguely unknown, it goes to show how fake news and violence can spread like wildfire.
