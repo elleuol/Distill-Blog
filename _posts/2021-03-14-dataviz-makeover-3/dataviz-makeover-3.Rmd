@@ -225,7 +225,7 @@ The Visualisation is finally done, and final product can be viewed through Table
 https://public.tableau.com/profile/louelle.teo#!/vizhome/DatavizMakeover3/Dashboard1?publish=yes
 
 -----
-# Five Major Observations from the Visualisation
+# **Five Major Observations from the Visualisation**
 
 
 ## 1. Increase in peaceful Protests since 2010
